@@ -1,0 +1,32 @@
+@media (min-width: 0px) and (max-width: 768px) {
+    .homescreen-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        
+    
+    }
+
+    .homescreen-container .left img {
+        margin-top: 30px;
+        width: 80vw;
+        height: 60vh;
+        border-radius: 7%;
+
+    }
+
+    .homescreen-container .right h1 {
+        padding-top: 3vh;
+        padding-left: 0px;
+        width: 200px;
+        margin: 0 auto;
+   
+    }
+
+    .aboutMe h2 {
+        margin-top: 2vh;
+        margin-left: 10vw;
+    }    
+
+}

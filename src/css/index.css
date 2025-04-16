@@ -1,0 +1,61 @@
+html, body, main {
+    background: linear-gradient(to bottom, #0C0C0C, #0A0017) no-repeat;
+}
+
+.navbar {
+    justify-content: center;
+    justify-self: center;
+}
+
+header {
+    background-color: black;
+}
+
+
+
+.homescreen-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+
+}
+
+.homescreen-container .left img {
+    margin-top: 5vh;
+    width: 40vw;
+    height: 80vh;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+
+
+}
+
+.homescreen-container .right h1 {
+    margin-left: 80px;
+}
+
+.aboutMe h2 {
+    margin-top: 1vh;
+    margin-left: 10vw;
+    
+}
+
+.aboutMe p {
+    margin-left: 15vw;
+    width: 70%;
+}
+
+footer {
+    display: flex;
+    background-color: #191818;
+    align-items: center;
+    justify-content: center;  /* centraliza horizontalmente */
+    height: 40px;
+}
+footer p{
+    font-size: 12px;
+    margin: 0; /* remove o padding padrão do parágrafo */
+    padding: 0; /* remove o padding padrão do parágrafo */
+}
+
