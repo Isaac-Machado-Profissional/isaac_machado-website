@@ -1,0 +1,30 @@
+{
+  "name": "isaac_machado-site",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config prod.config.js",
+    "start": "webpack serve"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Isaac-Machado-Profissional/isaac_machado-website.git"
+  },
+  "keywords": [
+    "isaac_machado-site"
+  ],
+  "author": "Isaac-Machado-Profissional",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Isaac-Machado-Profissional/isaac_machado-website/issues"
+  },
+  "homepage": "https://github.com/Isaac-Machado-Profissional/isaac_machado-website#readme",
+  "devDependencies": {
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
+}
