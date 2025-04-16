@@ -35,6 +35,26 @@ header {
     margin-left: 80px;
 }
 
+.typewritter-color, .letter-color {
+    color: #59F4B2;
+    
+}
+
+.homescreen-container .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
 .aboutMe h2 {
     margin-top: 1vh;
     margin-left: 10vw;
@@ -64,6 +84,12 @@ header {
     padding: 10px;
     border-radius: 20%;
 }
+
+.socialMedias a:hover {
+    background-color: #1a3d4b;
+    transition: 0.3s;
+}
+
 
 footer {
     display: flex;
