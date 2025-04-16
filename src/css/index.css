@@ -46,6 +46,25 @@ header {
     width: 70%;
 }
 
+.socialMedias {
+    display: flex;
+    justify-self: center;
+    background-color: #C9C4C4;
+    gap: 20px;
+    padding: 5px 50px;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    width: fit-content;
+    /* box-shadow: 0 2px 10px rgb(0, 0, 0); */
+}
+
+.socialMedias a {
+    background-color: #22566b;
+    padding: 10px;
+    border-radius: 20%;
+}
+
 footer {
     display: flex;
     background-color: #191818;
