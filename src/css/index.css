@@ -1,4 +1,6 @@
-html, body, main {
+html,
+body,
+main {
     background: linear-gradient(to bottom, #0C0C0C, #0A0017) no-repeat;
 }
 
@@ -11,18 +13,129 @@ header {
     background-color: black;
 }
 
+.navbar-custom {
+    padding: 1rem 2rem;
+    background-color: black;
+}
+
+.navbar-custom .nav-link {
+
+    color: #ffffff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    /* text-transform: uppercase; */
+    /* overflow: hidden; */
+
+
+}
+
+
+/* Botão base */
+.navbar-custom .navbar-link-custom {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #fff !important;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 1rem;
+    transition:
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background-position 0.6s ease;
+}
+
+/* Texto por cima do SVG */
+.navbar-link-custom .link-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* SVG border (hover effect) */
+.navbar-link-custom .link-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    transition: stroke-dashoffset 0.5s ease;
+    pointer-events: none;
+}
+
+/* Hover: desenha borda */
+.navbar-link-custom:hover .link-border {
+    stroke-dashoffset: 0;
+}
+
+/* Active/Current page: fundo tech e sombra animada */
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link[aria-current="page"] {
+    background: linear-gradient(45deg, #20013a, #4f1d9e, #9b7ae7);
+    /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
+
+    background-size: 100% 200%;
+    background-position: 0% 200%;
+    animation: gradient-slide-up 3s ease infinite;
+
+    box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgb(33, 1, 59);
+
+    transform: translateY(-2px) perspective(600px) rotateX(3deg);
+    color: #fff !important;
+}
+
+/* Retira o stroke quando ativo para não sobrepor o fundo */
+.navbar-link-custom.active .link-border {
+    stroke: none;
+}
+
+/* Clique visual */
+.navbar-link-custom:active {
+    transform: scale(0.98);
+    box-shadow:
+        0 0 220px rgb(0, 255, 255),
+        0 0 230px rgb(34, 2, 56);
+    transition: none;
+}
+
+/* Animação do gradiente */
+@keyframes gradient-slide-up {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
 
 
 .homescreen-container {
     display: flex;
     align-items: center;
     flex-direction: row;
-    
+
 
 }
 
 .homescreen-container .left img {
-    margin-top: 5vh;
+    margin-top: 3vh;
     width: 40vw;
     height: 80vh;
     border-top-right-radius: 7%;
@@ -35,9 +148,10 @@ header {
     margin-left: 80px;
 }
 
-.typewritter-color, .letter-color {
+.typewritter-color,
+.letter-color {
     color: #59F4B2;
-    
+
 }
 
 .homescreen-container .cursor {
@@ -46,9 +160,12 @@ header {
 }
 
 @keyframes blink {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
@@ -58,7 +175,7 @@ header {
 .aboutMe h2 {
     margin-top: 1vh;
     margin-left: 10vw;
-    
+
 }
 
 .aboutMe p {
@@ -95,12 +212,15 @@ footer {
     display: flex;
     background-color: #191818;
     align-items: center;
-    justify-content: center;  /* centraliza horizontalmente */
+    justify-content: center;
+    /* centraliza horizontalmente */
     height: 40px;
 }
-footer p{
-    font-size: 12px;
-    margin: 0; /* remove o padding padrão do parágrafo */
-    padding: 0; /* remove o padding padrão do parágrafo */
-}
 
+footer p {
+    font-size: 12px;
+    margin: 0;
+    /* remove o padding padrão do parágrafo */
+    padding: 0;
+    /* remove o padding padrão do parágrafo */
+}
