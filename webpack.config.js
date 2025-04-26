@@ -3,26 +3,26 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const webpack = require('webpack');
 const path = require('path');
-const porta = 9000;
+const porta = 9001;
 
 module.exports = {
   entry: './src/javascript/index.js', // Arquivo de entrada principal
   output: {
     path: path.resolve(__dirname, 'dist'), // Diretório de saída
-    filename: 'bundle.js', // Nome do arquivo gerado
+    filename: 'bundle.js', // Arquivo gerado
   },
   module: {
     rules: [
       {
-        test: /\.css$/, // Regras para processar arquivos CSS
+        test: /\.css$/, // Arquivos CSS
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/, // Regras para processar arquivos de imagem
-        type: 'asset/resource', // Corrigido: era 'assets/resource'
+        test: /\.(png|jpg|gif)$/, // Arquivos de imagem
+        type: 'asset/resource', 
       },
       {
-        test: /\.html$/, // Processar arquivos HTML
+        test: /\.html$/, // arquivos HTML
         use: ['html-loader'],
       },
     ],
@@ -40,11 +40,11 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, ''), // Certifique-se de que aponta para 'dist'
+    static: path.resolve(__dirname, ''),
     port: porta, // Porta do servidor
     open: true, // Abre automaticamente o navegador
     hot: true, // Habilita o Hot Module Replacement (HMR)
   },
   
-  mode: 'development', // Certifique-se de que o modo é 'development'
+  mode: 'development', 
 };
