@@ -2,6 +2,7 @@ html,
 body,
 main {
     background: linear-gradient(to bottom, #0C0C0C, #0A0017) no-repeat;
+    background-color: #191818;
 }
 
 .navbar {
@@ -10,12 +11,12 @@ main {
 }
 
 header {
-    background-color: black;
+    background-color: #0C0C0C;
 }
 
 .navbar-custom {
     padding: 1rem 2rem;
-    background-color: black;
+    background-color: #0C0C0C;
 }
 
 .navbar-custom .nav-link {
@@ -74,26 +75,38 @@ header {
 
 /* Hover: desenha borda */
 .navbar-link-custom:hover .link-border {
-    stroke-dashoffset: 0;
+    stroke-dashoffset: 0px;
 }
 
 /* Active/Current page: fundo tech e sombra animada */
 .navbar-custom .nav-link.active,
 .navbar-custom .nav-link[aria-current="page"] {
-    background: linear-gradient(45deg, #20013a, #4f1d9e, #9b7ae7);
+    background: linear-gradient(45deg, #20013a, #595cf4, #598ff4);
     /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
 
     background-size: 100% 200%;
     background-position: 0% 200%;
-    animation: gradient-slide-up 3s ease infinite;
+    animation: gradient-slide-up 3s ease-in;
 
-    box-shadow:
+    /* box-shadow:
         0 0 10px rgba(0, 255, 255, 0.6),
-        0 0 20px rgb(33, 1, 59);
+        0 0 20px rgb(33, 1, 59); */
 
     transform: translateY(-2px) perspective(600px) rotateX(3deg);
     color: #fff !important;
 }
+
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: none;
+}
+
+/* 3) Ainda no hover, religa a animação (reiniciada) */
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: gradient-slide-up 3s ease;
+}
+
 
 /* Retira o stroke quando ativo para não sobrepor o fundo */
 .navbar-link-custom.active .link-border {
@@ -103,11 +116,13 @@ header {
 /* Clique visual */
 .navbar-link-custom:active {
     transform: scale(0.98);
-    box-shadow:
-        0 0 220px rgb(0, 255, 255),
-        0 0 230px rgb(34, 2, 56);
-    transition: none;
+    /* box-shadow:
+        0 0 50px rgb(0, 255, 255),
+        0 0 50px rgb(34, 2, 56); */
+    transition: ease-in;
 }
+
+
 
 /* Animação do gradiente */
 @keyframes gradient-slide-up {
@@ -137,7 +152,10 @@ header {
 .homescreen-container .left img {
     margin-top: 3vh;
     width: 40vw;
-    height: 80vh;
+    max-width: 1000px;
+    /* min-width: 700px !important; */
+    height: 75vh;
+    max-height: 1000px;
     border-top-right-radius: 7%;
     border-bottom-right-radius: 7%;
 

@@ -1,3 +1,4 @@
+
 @media (min-width: 0px) and (max-width: 768px) {
     .homescreen-container {
         display: flex;
@@ -11,7 +12,9 @@
     .homescreen-container .left img {
         margin-top: 30px;
         width: 80vw;
-        height: 60vh;
+        max-width: 50vw !important;
+
+        height: 70vh;
         border-radius: 7%;
 
     }

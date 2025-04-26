@@ -1,3 +1,7 @@
 h1, h2, p {
     color: white;
 }
+
+h1 {
+    font-size: 48px;
+}
