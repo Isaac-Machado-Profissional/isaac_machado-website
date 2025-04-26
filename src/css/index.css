@@ -81,7 +81,9 @@ header {
 /* Active/Current page: fundo tech e sombra animada */
 .navbar-custom .nav-link.active,
 .navbar-custom .nav-link[aria-current="page"] {
-    background: linear-gradient(45deg, #20013a, #595cf4, #598ff4);
+    background-color: #dddde4;
+    font-weight: 600;
+    color: rgb(0, 0, 0) !important; 
     /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
 
     background-size: 100% 200%;
@@ -93,7 +95,7 @@ header {
         0 0 20px rgb(33, 1, 59); */
 
     transform: translateY(-2px) perspective(600px) rotateX(3deg);
-    color: #fff !important;
+    
 }
 
 .navbar-custom .nav-link.active:hover,

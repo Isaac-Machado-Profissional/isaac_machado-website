@@ -12,12 +12,23 @@
     .homescreen-container .left img {
         margin-top: 30px;
         width: 80vw;
-        max-width: 50vw !important;
+        max-width: 60vw !important;
 
-        height: 70vh;
+        height: 52vh;
         border-radius: 7%;
 
     }
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+    .nav-item {
+        margin-top: 2vh;
+        text-align: center;
+    }
+    .nav-link-custom {
+        margin: 0 auto;
+    }
+
 
     .homescreen-container .right h1 {
         padding-top: 3vh;
