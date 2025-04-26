@@ -29,18 +29,36 @@
         margin: 0 auto;
     }
 
-
+    .acordeon {
+        margin: 0;
+        width: 50%;
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+    
     .homescreen-container .right h1 {
         padding-top: 3vh;
         padding-left: 0px;
         width: 238px;
-        margin: 0 auto;
+        margin: 0 auto ;
    
+    }
+    .acordeon-header {
+        justify-self: center;
+    }
+    .acordeon-item {
+        border-bottom: 1px solid #ffffff;
+        /* width: -30vw; */
+        margin: 0 auto !important;
+    }
+    .acordeon-item {
+        justify-self: center;
+        max-width: 50vw;
     }
 
     .aboutMe h2 {
-        margin-top: 2vh;
-        margin-left: 10vw;
+        margin-top: 3vh;
+        
     }    
 
 }

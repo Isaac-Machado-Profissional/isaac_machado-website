@@ -3,6 +3,7 @@ body,
 main {
     background: linear-gradient(to bottom, #0C0C0C, #0A0017) no-repeat;
     background-color: #191818;
+    object-fit: scale-down;
 }
 
 .navbar {
@@ -83,7 +84,7 @@ header {
 .navbar-custom .nav-link[aria-current="page"] {
     background-color: #dddde4;
     font-weight: 600;
-    color: rgb(0, 0, 0) !important; 
+    color: rgb(0, 0, 0) !important;
     /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
 
     background-size: 100% 200%;
@@ -95,7 +96,7 @@ header {
         0 0 20px rgb(33, 1, 59); */
 
     transform: translateY(-2px) perspective(600px) rotateX(3deg);
-    
+
 }
 
 .navbar-custom .nav-link.active:hover,
@@ -168,11 +169,16 @@ header {
     margin-left: 80px;
 }
 
-.typewritter-color,
-.letter-color {
+.typewritter-color {
     color: #59F4B2;
-
 }
+
+.letter-color {
+    color: #1aaa6c;
+    font-weight: 650;
+    
+}
+
 
 .homescreen-container .cursor {
     display: inline-block;
@@ -191,22 +197,58 @@ header {
     }
 }
 
+.acordeon {
+    width: 400px;
 
-.aboutMe h2 {
-    margin-top: 1vh;
-    margin-left: 10vw;
+    margin-left: 5%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
 
 }
 
+
+.acordeon-header {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon-content {
+    background: rgba(255, 255, 255, 0); /* corzinha transparente */
+    backdrop-filter: blur(10px); /* <<< BLUR */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease, padding 0.8s ease;
+    border: rgb(255, 255, 255) 2px solid;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+
+/* .acordeon-content.open {
+    padding: 15px;
+} */
+
+.aboutMe h2 {
+    color: white;
+    text-align: center;
+    justify-self: center;
+}
+
 .aboutMe p {
-    margin-left: 15vw;
-    width: 70%;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+   
 }
 
 .socialMedias {
     display: flex;
     justify-self: center;
-    background-color: #C9C4C4;
     gap: 20px;
     padding: 5px 50px;
     border-radius: 10px;
@@ -217,13 +259,13 @@ header {
 }
 
 .socialMedias a {
-    background-color: #22566b;
+    background-color: #1aaa6c;
     padding: 10px;
     border-radius: 20%;
 }
 
 .socialMedias a:hover {
-    background-color: #1a3d4b;
+    background-color: #147a4e;
     transition: 0.3s;
 }
 

@@ -1,4 +1,4 @@
-.projects-container {
+.contact-container {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5vh;
@@ -6,6 +6,6 @@
     justify-self: center;
     height: 500px;
 }
-.projects-container h1 {
+.contact-container h1 {
    height: auto;
 }
