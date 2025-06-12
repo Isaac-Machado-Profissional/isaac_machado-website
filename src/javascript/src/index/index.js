@@ -1,4 +1,3 @@
-import '../css/style.css'
 
 import { startTypewriter } from './typewriter.js';
 import { initGradientRestart } from "./gradientRestart.js";

@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <title>Isaac Machado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/logos/isaac-machado.ico" type="image/x-icon">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script type="module" src="/src/javascript/index.js"></script>
+
+    <script type="module" src="/src/import/projects.js"></script>
 
 </head>
 
@@ -40,14 +43,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./projects.html" class="nav-link navbar-link-custom">
+                            <a href="./projects.html" class="nav-link navbar-link-custom active">
                                 <span class="link-text">Projetos</span>
                                 <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
                                     <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
                                 </svg></a>
                         </li>
                         <li class="nav-item">
-                            <a href="./formation.html" class="nav-link navbar-link-custom active">
+                            <a href="./formation.html" class="nav-link navbar-link-custom">
                                 <span class="link-text">Formação</span>
                                 <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
                                     <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
@@ -70,11 +73,32 @@
     </header>
 
     <main>
-        <div class="formation-container">
-            <h3>Formação</h3>
-        </div>
+        <div class="projects-container">
+            <h3>Projetos</h3>
 
+            <div class="project-item">
+                <img src="https://images.pexels.com/photos/8721343/pexels-photo-8721343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Preview do Projeto A">
+
+                <div class="project-info">
+                    <h4>Projeto A</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="Preview do Projeto B">
+
+                <div class="project-info">
+                    <h4>Projeto B</h4>
+                    <p>Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                </div>
+            </div>
+
+        </div>
     </main>
+
 
     <footer>
         <p>© 2025 Isaac Machado</p>

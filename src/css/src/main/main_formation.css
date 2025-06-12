@@ -1,0 +1,53 @@
+.formation-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: black;
+
+}
+
+.formation-container h3 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.formation-container h4 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 20%;
+
+}
+
+.formation-container h5 {
+    margin-left: 25%;
+}
+
+.formation-container h6 {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.formation-container .placeblock {
+    padding: 20px 50px 20px 50px;
+    background-color: aliceblue;
+    margin: 20px auto 20px auto;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.formation-container .placeblock h6 {
+    margin: 0px 0px 0px 0px;
+    color: black;
+}
+
+.formation-container .placeblock h5 {
+    color: black;
+    margin-left: 0px;
+}
+
+
+
+.formation-container .placeblock p {
+    color: black;
+}

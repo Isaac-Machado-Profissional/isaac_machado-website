@@ -1,0 +1,128 @@
+
+
+
+.homescreen-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+
+.homescreen-container .left img {
+    margin-top: 3vh;
+    width: 40vw;
+    max-width: 1000px;
+    /* min-width: 700px !important; */
+    height: 75vh;
+    max-height: 1000px;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+
+
+}
+
+.homescreen-container .right h1 {
+    margin-left: 80px;
+}
+
+.typewritter-color {
+    color: #59F4B2;
+}
+
+.letter-color {
+    color: #1aaa6c;
+    font-weight: 650;
+    
+}
+
+
+.homescreen-container .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.acordeon {
+    width: 400px;
+
+    margin-left: 5%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+
+
+.acordeon-header {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon-content {
+    background: rgba(255, 255, 255, 0); /* corzinha transparente */
+    backdrop-filter: blur(10px); /* <<< BLUR */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease, padding 0.8s ease;
+    border: rgb(255, 255, 255) 2px solid;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+
+/* .acordeon-content.open {
+    padding: 15px;
+} */
+
+.aboutMe h2 {
+    color: white;
+    text-align: center;
+    justify-self: center;
+}
+
+.aboutMe p {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+   
+}
+
+.socialMedias {
+    display: flex;
+    justify-self: center;
+    gap: 20px;
+    padding: 5px 50px;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    width: fit-content;
+    /* box-shadow: 0 2px 10px rgb(0, 0, 0); */
+}
+
+.socialMedias a {
+    background-color: #1aaa6c;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+.socialMedias a:hover {
+    background-color: #147a4e;
+    transition: 0.3s;
+}
+

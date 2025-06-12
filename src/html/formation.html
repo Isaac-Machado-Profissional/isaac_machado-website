@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <title>Isaac Machado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/logos/isaac-machado.ico" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script type="module" src="/src/javascript/index.js"></script>
+
+    <script type="module" src="/src/import/formation.js"></script>
 
 </head>
 
@@ -40,14 +42,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./projects.html" class="nav-link navbar-link-custom active">
+                            <a href="./projects.html" class="nav-link navbar-link-custom">
                                 <span class="link-text">Projetos</span>
                                 <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
                                     <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
                                 </svg></a>
                         </li>
                         <li class="nav-item">
-                            <a href="./formation.html" class="nav-link navbar-link-custom">
+                            <a href="./formation.html" class="nav-link navbar-link-custom active">
                                 <span class="link-text">Formação</span>
                                 <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
                                     <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
@@ -70,11 +72,71 @@
     </header>
 
     <main>
-        <div class="projects-container">
-            <h3>Projetos</h3>
-        </div>
-    </main>
+        <div class="formation-container">
+            <h3>Formação</h3>
 
+            <div class="formation-content">
+                <h4>Ensino Superior</h4>
+                <h5>UNIVESP</h5>
+                <h6>Bacharelado em Engenharia da Computação</h6>
+
+                <div class="placeblock">
+                    <h5 class="d-flex justify-content-center"><strong>Cursos Extras</strong></h5>
+                    <ul>
+                        <li><strong>Alura DEV Games</strong></li>
+                        <li><strong>Amazon AWS Introduction to Generative AI</strong></li>
+                        <li><strong>Postman API Fundamentals Student Expert</strong></li>
+                        <li><strong>Imersão DEV Back-END</strong></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="formation-content">
+                <h4>Ensino Médio</h4>
+                <h5>E.E Doutor Ayres Neto</h5>
+
+                <div class="placeblock">
+
+                    <h5 class="d-flex justify-content-center"><strong>Experiência Profissional</strong></h5>
+                    <ul>
+                        <li><strong>GRB Services</strong></li>
+                        <h6>Telemarketing — Estágio</h6>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="formation-content">
+                <h4>Ensino Fundamental</h4>
+                <h5>C.E.U Alvarenga</h5>
+
+                <div class="placeblock">
+                    <h5 class="d-flex justify-content-center"><strong>Extracurricular</strong></h5>
+                    <li><strong>Imprensa Jovem — Planeta C.E.U</strong></li>
+                    <div class="icon-container d-flex gap-2 mt-2 mb-2">
+                        <div class="icon-content">
+                            <img src="assets/logos/excel_logo.png"
+                                width="50px" height="50px">
+                        </div>
+
+                        <div class="icon-content">
+                            <img src="assets/logos/word_logo.png"
+                                width="50px" height="50px">
+                        </div>
+
+                        <div class="icon-content">
+                            <img src="assets/logos/powerpoint_logo.png"
+                                width="50px" height="50px">
+                        </div>
+                        <h6 class="d-flex align-items-center">Excel, Word, Powerpoint</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
 
     <footer>
         <p>© 2025 Isaac Machado</p>

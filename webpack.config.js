@@ -3,92 +3,74 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
-const porta = 9001;
+
+const PORTA = 9000;
+
+const pages = ['index', 'contact', 'formation', 'skills', 'projects'];
+
+// Passo 1: Criar o objeto de pontos de entrada dinamicamente
+const entryPoints = pages.reduce((acc, page) => {
+  // Assumindo que o nome do JS é o mesmo do HTML
+  acc[page] = `./src/javascript/import/${page}.js`;
+  return acc;
+}, {});
 
 module.exports = {
-  entry: './src/javascript/index.js', // Arquivo de entrada principal
+  // Use o objeto de entradas que criamos
+  entry: entryPoints,
   output: {
-    path: path.resolve(__dirname, 'dist'), // Diretório de saída
-    filename: 'bundle.js', // Arquivo JavaScript gerado
-    publicPath: '/', // Caminho absoluto para os assets gerados
+    path: path.resolve(__dirname, 'dist'),
+    // Passo 2: Use [name] para criar um bundle para cada entrada
+    filename: 'javascript/[name].bundle.js',
+    publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
       {
-        test: /\.css$/, // Processa arquivos CSS
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/, // Processa imagens
+        test: /\.(png|jpg|gif)$/,
         type: 'asset/resource',
-      },
-      {
-        test: /\.html$/, // Processa arquivos HTML (caso precise importar partes deles)
-        use: ['html-loader'],
+        generator: {
+          filename: 'assets/images/[hash][ext][query]'
+        }
       },
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(), // Para HMR (Hot Module Replacement) em desenvolvimento
-    // Cria o index.html com injeção automática do bundle e dos assets processados
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: 'index.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './public/contact.html',
-      filename: 'contact.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './public/formation.html',
-      filename: 'formation.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './public/skills.html',
-      filename: 'skills.html',
-      inject: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: './public/projects.html',
-      filename: 'projects.html',
-      inject: true,
-    }),
+    new webpack.HotModuleReplacementPlugin(),
 
+    // Passo 3: Diga a cada HTML qual chunk (JS) ele deve usar
+    ...pages.map(page => new HtmlWebpackPlugin({
+        template: `./src/html/${page}.html`,
+        filename: `${page}.html`,
+        inject: true,
+        chunks: [page] // Conecta 'index.html' com 'index.bundle.js', e assim por diante.
+      })
+    ),
 
-    // Copia os arquivos estáticos da pasta public para o diretório de saída,
-    // ignorando os HTMLs que já foram processados pelo HtmlWebpackPlugin
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: './public',
-          to: '.',
-          globOptions: {
-            ignore: [
-              '**/index.html',
-              '**/contact.html',
-              '**/formation.html',
-              '**/skills.html',
-              '**/projects.html',
-
-            ],
-          },
+          from: './src/assets',
+          to: 'assets',
         },
-        
       ],
     }),
+
     new MiniCssExtractPlugin({
-      filename: '[name].css',     // Nome do arquivo CSS principal
-      chunkFilename: '[id].css',  // Nome dos chunks, se houver
+      filename: 'styles/[name].css',
+      chunkFilename: 'styles/[id].css',
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'), // Serve os arquivos do diretório de saída (dist)
-    port: porta,                             // Porta do servidor
-    open: true,                              // Abre o navegador automaticamente
-    hot: true,                               // Ativa o HMR
+    static: path.resolve(__dirname, 'dist'),
+    port: PORTA,
+    open: true,
+    hot: true,
   },
   mode: 'development',
 };

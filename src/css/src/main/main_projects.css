@@ -1,0 +1,148 @@
+/* --- CONTAINER PRINCIPAL DOS PROJETOS --- */
+.projects-container {
+    /* Define como um contêiner de coluna flexível */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espaço vertical entre os itens (h3 e cada project-item) */
+
+    /* Define a largura máxima e centraliza na página */
+    max-width: 1200px;
+    margin: 5vh auto; /* 5vh em cima/baixo, e 'auto' para centralizar horizontalmente */
+
+    /* Adiciona um respiro interno */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Unificamos as regras do h3 em uma só */
+.projects-container h3 {
+    text-align: center;
+    font-size: 50px; /* ou 2.5rem, que é mais flexível */
+    font-weight: 600; /* Um pouco de peso na fonte */
+    margin-bottom: 1rem; /* Espaço entre o título e o primeiro projeto */
+}
+
+/* --- ESTILO E LAYOUT DE CADA CARD (INTERNO) --- */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    /* Estilos visuais */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* O card não deve exceder 800px, mesmo em telas muito grandes */
+    max-width: 800px;
+}
+
+/* --- CONTROLE DO ZIGUE-ZAGUE --- */
+/* Alinha projetos ímpares (1, 3, 5...) à esquerda */
+.project-item:nth-of-type(odd) {
+    align-self: flex-start;
+}
+
+/* Alinha projetos pares (2, 4, 6...) à direita e inverte a ordem dos itens internos */
+.project-item:nth-of-type(even) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+/* --- ESTILOS DOS ITENS DENTRO DOS CARDS --- */
+.project-item img {
+    width: 50%;
+    /* height: 250px; Uma altura fixa para as imagens pode deixar o layout mais uniforme */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.project-item .project-info {
+    width: 50%;
+}
+
+.project-item .project-info h4 {
+    color: #1a1a1a;
+    margin-top: 0; /* Remove margem padrão do h4 */
+}
+
+.project-item .project-info p {
+    color: #4f4f4f; /* Um cinza mais suave para o texto */
+}
+
+.projects-container h3 {
+    text-align: center;
+}
+
+.projects-container h3 {
+    text-align: center;
+    font-size: 50px;
+}
+
+/* --- ESTILO E LAYOUT DE CADA CARD (INTERNO) --- */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    /* Estilos visuais */
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* O card não deve exceder a largura do container */
+    max-width: 800px;
+}
+
+/* --- CONTROLE DO ZIGUE-ZAGUE --- */
+/* Alinha o primeiro projeto (A) à ESQUERDA dentro do container */
+.project-item:nth-of-type(1) {
+    align-self: flex-start;
+}
+
+/* Alinha o segundo projeto (B) à DIREITA dentro do container */
+.project-item:nth-of-type(2) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+    /* Inverte a imagem e o texto */
+}
+
+/* Se você adicionar mais projetos, pode alternar o padrão assim: */
+/* Alinha projetos ímpares (1, 3, 5...) à esquerda */
+.project-item:nth-of-type(odd) {
+    align-self: flex-start;
+}
+
+/* Alinha projetos pares (2, 4, 6...) à direita e inverte a ordem */
+.project-item:nth-of-type(even) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+
+/* --- ESTILOS DOS ITENS DENTRO DOS CARDS --- */
+.project-item img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.project-item .project-info {
+    width: 50%;
+}
+
+.project-item .project-info h4 {
+    color: rgb(7, 7, 7);
+
+}
+
+.project-item .project-info p {
+    color: rgb(26, 26, 26);
+}
