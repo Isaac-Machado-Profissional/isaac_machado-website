@@ -4,7 +4,7 @@
     margin-right: 10%;
     margin-bottom: 5vh;
     justify-self: center;
- 
+
 }
 
 .skills-container h3 {
@@ -21,4 +21,10 @@
     width: 100%;
     padding: 20px;
     margin-top: 20px;
+}
+
+
+.card-title {
+    font-size: 20px !important;
+    font-weight: bold;
 }

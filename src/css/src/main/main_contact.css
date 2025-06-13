@@ -14,3 +14,127 @@
     margin-left: 20%;
     margin-right: 20%;
 }
+
+.socialMedias {
+    display: flex;
+    justify-self: center;
+    gap: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    width: fit-content;
+    /* box-shadow: 0 2px 10px rgb(0, 0, 0); */
+}
+
+.socialMedias a {
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 20%;
+    transition: background-color 0.3s;
+
+}
+
+.socialMedias a:hover {
+    background-color: black;
+}
+
+.socialMedias a:hover svg {
+    fill: white;
+}
+
+
+.contact-background {
+    padding: 20px;
+    border-radius: 16px;
+    width: 100%;
+}
+
+.contact-background .form-control {
+    background-color: rgb(39, 39, 39);
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+}
+
+.contact-background .form-control:focus {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.form-control {
+    box-shadow: none; /* Remove a sombra de foco padrão */
+    outline: none; /* Remove o contorno padrão */
+    transition: box-shadow 0.3s ease-in-out;
+}
+.form-control:focus {
+    box-shadow: none; /* Remove a sombra de foco padrão */
+    outline: none; /* Remove o contorno padrão */
+    border: none;
+    box-shadow: 3px 2px 0px 4px rgb(39, 39, 39);
+}
+
+.form-control.personalization {
+    background-color: transparent;
+    border-radius: 0; /* Remove os cantos arredondados */
+    box-shadow: none; /* Remove a sombra de foco padrão */
+    outline: none;
+    border: none;
+    color: white;
+    border-bottom: 2px solid white;
+    transition: border-color 0.3s ease-in-out;
+
+}
+
+.form-control::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+
+
+.form-control.personalization:focus {
+    /* A barrinha fica branca e sólida, indicando que o campo está ativo */
+    border-bottom-color: white;
+    
+    box-shadow: none;
+    background-color: transparent;
+
+}
+
+
+
+
+.personalization::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.send-button {
+    margin-top: 2px;
+    background-color: #11c05f;
+    /* Usando uma cor que você já tem no site */
+    border: none;
+    padding: 1rem;
+    font-weight: bold;
+    width: 50%;
+    justify-self: center;
+    border-radius: 8px;
+    color: black;
+
+}
+
+
+.btn-primary.send-button:hover,
+.btn-primary.send-button:focus,
+.btn-primary.send-button:focus-visible,
+.btn-primary.send-button:active {
+    background-color: #005e35;
+    /* Opcional: para garantir que a cor da borda não mude */
+    border-color: #00b969;
+    /* Opcional: para remover a sombra de foco padrão do Bootstrap */
+    box-shadow: none;
+}
+
+/* É uma boa prática definir também o estado padrão do botão */

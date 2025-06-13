@@ -1,36 +1,54 @@
 export function initAcordeonWithScroll() {
-    const headers = document.querySelectorAll('.acordeon-header');
-  
-    headers.forEach(header => {
-      header.addEventListener('click', () => {
-        const content  = header.nextElementSibling;
-        // Estado ANTES da mudança:
-        const wasClosed = !content.style.maxHeight || content.style.maxHeight === '0px';
-  
-        // 1) Alterna abrir/fechar
-        if (wasClosed) {
-          content.style.maxHeight = content.scrollHeight + "px";
-          content.classList.add('open');
-        } else {
-          content.style.maxHeight = null;
-          content.classList.remove('open');
-        }
-  
-        // 2) Depois de um pequeno delay, faz o scroll correto
+  const triggers = document.querySelectorAll('.acordeon-trigger');
+  if (!triggers.length) return;
+
+  // IMPORTANTE: Este valor deve ser o mesmo da sua animação no CSS.
+  // Ex: transition: grid-template-rows 0.5s ease-in-out; -> o valor aqui deve ser 500.
+  const ANIMATION_DURATION = 500; // 500 milissegundos
+
+  triggers.forEach(trigger => {
+    const item = trigger.closest('.acordeon-item');
+    const contentContainer = document.getElementById(trigger.getAttribute('aria-controls'));
+
+    if (!item || !contentContainer) return;
+
+    const toggleAccordion = () => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // 1. Apenas alterna o estado. Isso inicia a animação do CSS.
+      trigger.setAttribute('aria-expanded', !isExpanded);
+      item.classList.toggle('is-open');
+
+      if (!isExpanded) {
+        // --- SE VAI ABRIR: ROLA PARA O RODAPÉ ---
+
+        // 2. ESPERA a animação terminar com um timeout simples.
         setTimeout(() => {
-          if (wasClosed) {
-            // → acabou de abrir: desce para mostrar conteúdo
-            const bottom = content.getBoundingClientRect().bottom;
-            const winH   = window.innerHeight;
-            if (bottom > winH) {
-              window.scrollBy({ top: bottom - winH + 150, behavior: 'smooth' });
-            }
-          } else {
-            // → acabou de fechar: sobe toda a tela
-            window.scrollBy({ top: -window.scrollY, behavior: 'smooth' });
-          }
-        }, 400); // ajuste conforme sua duração de transition
-      });
+          // 3. Executa UM ÚNICO comando de scroll para o final da página.
+          const pageHeight = document.body.scrollHeight;
+          window.scrollTo({
+            top: pageHeight,
+            behavior: 'smooth'
+          });
+        }, ANIMATION_DURATION);
+
+      } else {
+        // --- SE VAI FECHAR: ROLA PARA O TOPO ---
+
+        // Ao fechar, o scroll pode ser imediato, o que cria um efeito agradável.
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    trigger.addEventListener('click', toggleAccordion);
+    trigger.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleAccordion();
+      }
     });
-  }
-  
+  });
+}

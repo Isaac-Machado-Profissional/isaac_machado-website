@@ -1,62 +1,49 @@
 /* --- CONTAINER PRINCIPAL DOS PROJETOS --- */
 .projects-container {
-    /* Define como um contêiner de coluna flexível */
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* Espaço vertical entre os itens (h3 e cada project-item) */
-
-    /* Define a largura máxima e centraliza na página */
+    align-items: center; /* Centraliza os cards caso não usem align-self */
+    gap: 2rem;
     max-width: 1200px;
-    margin: 5vh auto; /* 5vh em cima/baixo, e 'auto' para centralizar horizontalmente */
-
-    /* Adiciona um respiro interno */
-    margin-left: auto;
-    margin-right: auto;
+    margin: 5vh auto;
+    padding: 0 1rem; /* Adiciona um respiro nas laterais */
 }
 
-
-
-/* Unificamos as regras do h3 em uma só */
 .projects-container h3 {
     text-align: center;
-    font-size: 50px; /* ou 2.5rem, que é mais flexível */
-    font-weight: 600; /* Um pouco de peso na fonte */
-    margin-bottom: 1rem; /* Espaço entre o título e o primeiro projeto */
+    font-size: 2.5rem; /* Usando 'rem' para mais flexibilidade */
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
-/* --- ESTILO E LAYOUT DE CADA CARD (INTERNO) --- */
+/* --- ESTILO DE CADA CARD DE PROJETO --- */
 .project-item {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-
-    /* Estilos visuais */
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-    /* O card não deve exceder 800px, mesmo em telas muito grandes */
-    max-width: 800px;
+    max-width: 800px; /* Largura máxima para desktop */
 }
 
-/* --- CONTROLE DO ZIGUE-ZAGUE --- */
-/* Alinha projetos ímpares (1, 3, 5...) à esquerda */
+/* --- LÓGICA DO ZIGUE-ZAGUE --- */
+/* Esta lógica agora se aplicará a todas as telas */
 .project-item:nth-of-type(odd) {
     align-self: flex-start;
 }
 
-/* Alinha projetos pares (2, 4, 6...) à direita e inverte a ordem dos itens internos */
 .project-item:nth-of-type(even) {
     align-self: flex-end;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Inverte a imagem e o texto */
 }
 
-/* --- ESTILOS DOS ITENS DENTRO DOS CARDS --- */
+/* --- ITENS DENTRO DOS CARDS (IMAGEM E TEXTO) --- */
 .project-item img {
     width: 50%;
-    /* height: 250px; Uma altura fixa para as imagens pode deixar o layout mais uniforme */
+    aspect-ratio: 16 / 10; /* Proporção para manter a imagem uniforme */
     object-fit: cover;
     border-radius: 4px;
 }
@@ -64,6 +51,20 @@
 .project-item .project-info {
     width: 50%;
 }
+
+.project-item .project-info h4 {
+    color: #1a1a1a;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.project-item .project-info p {
+    color: #4f4f4f;
+    font-size: 1rem;
+}
+
+
+
 
 .project-item .project-info h4 {
     color: #1a1a1a;
