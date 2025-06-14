@@ -383,6 +383,7 @@ main {
 
 .modal-buttons a {
     text-decoration: none;
+    gap: 2rem;
 }
 
 .modal-buttons svg {
@@ -414,7 +415,11 @@ main {
 }
 
 
-
+.modal-links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+}
 
 .modal-links a:hover svg {
     stroke: #ffffff;
@@ -424,7 +429,6 @@ main {
     background-color: #1aaa6c;
 
 }
-
 @media (max-width: 1000px) {
 
     /* Diminui a largura máxima do card para que o zigue-zague apareça */

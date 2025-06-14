@@ -181,6 +181,7 @@
 
 .modal-buttons a {
     text-decoration: none;
+    gap: 2rem;
 }
 
 .modal-buttons svg {
@@ -212,7 +213,11 @@
 }
 
 
-
+.modal-links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+}
 
 .modal-links a:hover svg {
     stroke: #ffffff;
