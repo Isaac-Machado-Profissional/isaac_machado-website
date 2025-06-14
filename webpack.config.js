@@ -70,6 +70,7 @@ module.exports = {
     static: [ {
         // Serve os arquivos estáticos do diretório 'public'
         directory: path.resolve(__dirname, 'public'),
+         directory: path.resolve(__dirname, 'docs'),
         directory: path.resolve(__dirname, 'src/html'),
     }
 
