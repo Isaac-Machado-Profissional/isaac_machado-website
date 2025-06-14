@@ -1,0 +1,234 @@
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+h3 {
+    font-size: 50px
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    background-color: #191818;
+    align-items: center;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    height: 40px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    /* remove o padding padrão do parágrafo */
+    padding: 0;
+    /* remove o padding padrão do parágrafo */
+}
+
+.navbar {
+    justify-content: center;
+    justify-self: center;
+}
+
+header {
+    background-color: #0C0C0C;
+}
+
+
+.navbar-custom {
+    padding: 1rem 2rem;
+    background-color: #0C0C0C;
+}
+
+.navbar-custom .nav-link {
+
+    color: #ffffff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    /* text-transform: uppercase; */
+    /* overflow: hidden; */
+
+
+}
+
+
+/* Botão base */
+.navbar-custom .navbar-link-custom {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #fff !important;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 1rem;
+    transition:
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background-position 0.6s ease;
+}
+
+/* Texto por cima do SVG */
+.navbar-link-custom .link-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* SVG border (hover effect) */
+.navbar-link-custom .link-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    transition: stroke-dashoffset 0.5s ease;
+    pointer-events: none;
+}
+
+/* Hover: desenha borda */
+.navbar-link-custom:hover .link-border {
+    stroke-dashoffset: 0px;
+}
+
+/* Active/Current page: fundo tech e sombra animada */
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link[aria-current="page"] {
+    background-color: #dddde4;
+    font-weight: 600;
+    color: rgb(0, 0, 0) !important;
+    /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
+
+    background-size: 100% 200%;
+    background-position: 0% 200%;
+    animation: gradient-slide-up 3s ease-in;
+
+    /* box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgb(33, 1, 59); */
+
+    transform: translateY(-2px) perspective(600px) rotateX(3deg);
+
+}
+
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: none;
+}
+
+/* 3) Ainda no hover, religa a animação (reiniciada) */
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: gradient-slide-up 3s ease;
+}
+
+
+/* Retira o stroke quando ativo para não sobrepor o fundo */
+.navbar-link-custom.active .link-border {
+    stroke: none;
+}
+
+/* Clique visual */
+.navbar-link-custom:active {
+    transform: scale(0.98);
+    /* box-shadow:
+        0 0 50px rgb(0, 255, 255),
+        0 0 50px rgb(34, 2, 56); */
+    transition: ease-in;
+}
+
+
+
+/* Animação do gradiente */
+@keyframes gradient-slide-up {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+/* Removemos o "global:" e o "object-fit" */
+
+/* 1. Aplique o background APENAS ao html e body */
+html, body {
+    /* O gradiente agora cobre a página inteira */
+    background: linear-gradient(to bottom, #0C0C0C, #0A0017);
+    /* Cor de fallback caso o gradiente falhe ou não carregue */
+    background-color: #0A0017;
+    background-repeat: no-repeat;
+
+    /* Adicional: Faz o background ficar fixo e não rolar com a página,
+       o que deixa o gradiente mais estável e bonito. */
+    background-attachment: fixed;
+
+    /* Define uma cor de texto padrão para o site, evitando texto preto em fundo escuro */
+    color: white;
+
+    /* 2. Garante que o body ocupe no mínimo a tela inteira */
+    min-height: 100vh;
+    margin: 0; /* Boa prática para zerar margens padrão do navegador */
+    padding: 0; /* Boa prática para zerar paddings padrão */
+}
+
+/* 3. Estrutura a página para o footer ficar sempre no final */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Esta regra mágica faz o conteúdo principal (main) crescer
+       para ocupar todo o espaço disponível, empurrando o footer para baixo. */
+    flex-grow: 1;
+}
+.skills-container {
+    margin-top: 5vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5vh;
+    justify-self: center;
+
+}
+
+.skills-container h3 {
+    text-align: center;
+    font-size: 48px;
+}
+
+
+.skills-container p {
+    color: black;
+}
+
+.skills-items {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.card-title {
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+

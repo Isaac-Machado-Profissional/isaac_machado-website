@@ -19,7 +19,7 @@ module.exports = {
   // Use o objeto de entradas que criamos
   entry: entryPoints,
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'docs'),
     // Passo 2: Use [name] para criar um bundle para cada entrada
     filename: 'javascript/[name].bundle.js',
     publicPath: '/',

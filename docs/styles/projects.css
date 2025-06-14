@@ -1,0 +1,471 @@
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+h3 {
+    font-size: 50px
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    background-color: #191818;
+    align-items: center;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    height: 40px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    /* remove o padding padrão do parágrafo */
+    padding: 0;
+    /* remove o padding padrão do parágrafo */
+}
+
+.navbar {
+    justify-content: center;
+    justify-self: center;
+}
+
+header {
+    background-color: #0C0C0C;
+}
+
+
+.navbar-custom {
+    padding: 1rem 2rem;
+    background-color: #0C0C0C;
+}
+
+.navbar-custom .nav-link {
+
+    color: #ffffff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    /* text-transform: uppercase; */
+    /* overflow: hidden; */
+
+
+}
+
+
+/* Botão base */
+.navbar-custom .navbar-link-custom {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #fff !important;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 1rem;
+    transition:
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background-position 0.6s ease;
+}
+
+/* Texto por cima do SVG */
+.navbar-link-custom .link-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* SVG border (hover effect) */
+.navbar-link-custom .link-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    transition: stroke-dashoffset 0.5s ease;
+    pointer-events: none;
+}
+
+/* Hover: desenha borda */
+.navbar-link-custom:hover .link-border {
+    stroke-dashoffset: 0px;
+}
+
+/* Active/Current page: fundo tech e sombra animada */
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link[aria-current="page"] {
+    background-color: #dddde4;
+    font-weight: 600;
+    color: rgb(0, 0, 0) !important;
+    /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
+
+    background-size: 100% 200%;
+    background-position: 0% 200%;
+    animation: gradient-slide-up 3s ease-in;
+
+    /* box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgb(33, 1, 59); */
+
+    transform: translateY(-2px) perspective(600px) rotateX(3deg);
+
+}
+
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: none;
+}
+
+/* 3) Ainda no hover, religa a animação (reiniciada) */
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: gradient-slide-up 3s ease;
+}
+
+
+/* Retira o stroke quando ativo para não sobrepor o fundo */
+.navbar-link-custom.active .link-border {
+    stroke: none;
+}
+
+/* Clique visual */
+.navbar-link-custom:active {
+    transform: scale(0.98);
+    /* box-shadow:
+        0 0 50px rgb(0, 255, 255),
+        0 0 50px rgb(34, 2, 56); */
+    transition: ease-in;
+}
+
+
+
+/* Animação do gradiente */
+@keyframes gradient-slide-up {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+/* Removemos o "global:" e o "object-fit" */
+
+/* 1. Aplique o background APENAS ao html e body */
+html, body {
+    /* O gradiente agora cobre a página inteira */
+    background: linear-gradient(to bottom, #0C0C0C, #0A0017);
+    /* Cor de fallback caso o gradiente falhe ou não carregue */
+    background-color: #0A0017;
+    background-repeat: no-repeat;
+
+    /* Adicional: Faz o background ficar fixo e não rolar com a página,
+       o que deixa o gradiente mais estável e bonito. */
+    background-attachment: fixed;
+
+    /* Define uma cor de texto padrão para o site, evitando texto preto em fundo escuro */
+    color: white;
+
+    /* 2. Garante que o body ocupe no mínimo a tela inteira */
+    min-height: 100vh;
+    margin: 0; /* Boa prática para zerar margens padrão do navegador */
+    padding: 0; /* Boa prática para zerar paddings padrão */
+}
+
+/* 3. Estrutura a página para o footer ficar sempre no final */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Esta regra mágica faz o conteúdo principal (main) crescer
+       para ocupar todo o espaço disponível, empurrando o footer para baixo. */
+    flex-grow: 1;
+}
+/* --- CONTAINER PRINCIPAL --- */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 5vh auto;
+    padding: 0 1rem;
+
+}
+
+.projects-container h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+}
+
+/* --- ESTILO DE CADA CARD DE PROJETO --- */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+/* --- LÓGICA DO ZIGUE-ZAGUE --- */
+.project-item:nth-of-type(odd) {
+    align-self: flex-start;
+}
+
+.project-item:nth-of-type(even) {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+/* --- ITENS DENTRO DOS CARDS --- */
+.project-item img {
+    width: 50%;
+    /* aspect-ratio: 16 / 10; */
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.4s ease-in-out;
+    pointer-events: none;
+
+}
+
+/* Define a origem do zoom para cada lado */
+.project-item:nth-of-type(odd) img {
+    transform-origin: left center;
+}
+
+.project-item:nth-of-type(even) img {
+    transform-origin: right center;
+}
+
+.project-item .project-info {
+    width: 50%;
+    transition: opacity 0.4s ease-in-out;
+
+}
+
+.project-item .project-info h4 {
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-left: 24px;
+    margin-right: 24px;
+
+}
+
+.project-item .project-info p {
+    color: #4f4f4f;
+    font-size: 1rem;
+
+}
+
+/* --- EFEITO NO HOVER --- */
+.project-item:hover img {
+    transform: scale(2);
+    filter: brightness(0.5);
+}
+
+.project-item:hover .project-info {
+    opacity: 0;
+
+}
+
+/* --- BOTÕES SOBREPOSTOS --- */
+.overlay-buttons {
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    opacity: 0;
+
+    position: absolute;
+    ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 1px solid rgb(27, 27, 27);
+}
+
+.modal-site-preview {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.project-item:hover .overlay-buttons {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, z-index 0s 0.3s ease-in-out;
+}
+
+
+.glightbox-hidden {
+    display: none;
+}
+
+.project-modal-content {
+    padding: 2rem 2rem 0px 2rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    color: black;
+}
+
+.project-modal-content h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+
+}
+
+.project-modal-content p {
+    color: black;
+    background-color: none;
+
+}
+
+.gslide-desc {
+    color: black;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem;
+}
+
+.modal-buttons {
+    display: flex;
+    /* Alinha os botões lado a lado */
+    /* Espaçamento entre os botões */
+    margin-top: 1.5rem;
+
+}
+
+.modal-buttons a {
+    text-decoration: none;
+}
+
+.modal-buttons svg {
+    width: 30px;
+    height: 30px;
+    stroke: #1aaa6c;
+}
+
+
+/* Estilo principal do botão (aplicado na tag <a>) */
+.modal-buttons .btn-modal {
+    display: inline-flex;
+    gap: 1rem;
+
+    /* Essencial para alinhar o SVG e o texto */
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(39, 39, 39);
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+
+
+
+.modal-links a:hover svg {
+    stroke: #ffffff;
+}
+
+.modal-buttons .btn-modal:hover {
+    background-color: #1aaa6c;
+
+}
+
+@media (max-width: 1000px) {
+
+    /* Diminui a largura máxima do card para que o zigue-zague apareça */
+    .project-item {
+        max-width: 100%;
+        /* Ocupa 90% da largura da tela */
+
+        /* MUITO IMPORTANTE: Empilha a imagem e o texto DENTRO do card */
+        flex-direction: column;
+    }
+
+    /* Nos cards pares, removemos a inversão da direção interna,
+       pois agora todos são verticais. Apenas o alinhamento (flex-end) permanece. */
+    .project-item:nth-of-type(even) {
+        flex-direction: column;
+    }
+
+    /* A imagem agora ocupa toda a largura do card */
+    .project-item img {
+        width: 100%;
+    }
+
+    /* O bloco de informações também ocupa toda a largura */
+    .project-item .project-info {
+        width: 100%;
+        text-align: center;
+        /* Centraliza o texto para um visual mais limpo */
+    }
+
+    /* Reduz o tamanho da fonte do título principal */
+    .project-info h4 {
+        font-size: 2rem;
+    }
+
+    .project-item:nth-of-type(odd) img {
+        transform-origin: center center;
+    }
+
+    .project-item:nth-of-type(even) img {
+        transform-origin: center center;
+    }
+
+}
+

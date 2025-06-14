@@ -1,0 +1,454 @@
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+h3 {
+    font-size: 50px
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    background-color: #191818;
+    align-items: center;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    height: 40px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    /* remove o padding padrão do parágrafo */
+    padding: 0;
+    /* remove o padding padrão do parágrafo */
+}
+
+.navbar {
+    justify-content: center;
+    justify-self: center;
+}
+
+header {
+    background-color: #0C0C0C;
+}
+
+
+.navbar-custom {
+    padding: 1rem 2rem;
+    background-color: #0C0C0C;
+}
+
+.navbar-custom .nav-link {
+
+    color: #ffffff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    /* text-transform: uppercase; */
+    /* overflow: hidden; */
+
+
+}
+
+
+/* Botão base */
+.navbar-custom .navbar-link-custom {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #fff !important;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 1rem;
+    transition:
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background-position 0.6s ease;
+}
+
+/* Texto por cima do SVG */
+.navbar-link-custom .link-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* SVG border (hover effect) */
+.navbar-link-custom .link-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    transition: stroke-dashoffset 0.5s ease;
+    pointer-events: none;
+}
+
+/* Hover: desenha borda */
+.navbar-link-custom:hover .link-border {
+    stroke-dashoffset: 0px;
+}
+
+/* Active/Current page: fundo tech e sombra animada */
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-link[aria-current="page"] {
+    background-color: #dddde4;
+    font-weight: 600;
+    color: rgb(0, 0, 0) !important;
+    /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
+
+    background-size: 100% 200%;
+    background-position: 0% 200%;
+    animation: gradient-slide-up 3s ease-in;
+
+    /* box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgb(33, 1, 59); */
+
+    transform: translateY(-2px) perspective(600px) rotateX(3deg);
+
+}
+
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: none;
+}
+
+/* 3) Ainda no hover, religa a animação (reiniciada) */
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: gradient-slide-up 3s ease;
+}
+
+
+/* Retira o stroke quando ativo para não sobrepor o fundo */
+.navbar-link-custom.active .link-border {
+    stroke: none;
+}
+
+/* Clique visual */
+.navbar-link-custom:active {
+    transform: scale(0.98);
+    /* box-shadow:
+        0 0 50px rgb(0, 255, 255),
+        0 0 50px rgb(34, 2, 56); */
+    transition: ease-in;
+}
+
+
+
+/* Animação do gradiente */
+@keyframes gradient-slide-up {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+/* Removemos o "global:" e o "object-fit" */
+
+/* 1. Aplique o background APENAS ao html e body */
+html, body {
+    /* O gradiente agora cobre a página inteira */
+    background: linear-gradient(to bottom, #0C0C0C, #0A0017);
+    /* Cor de fallback caso o gradiente falhe ou não carregue */
+    background-color: #0A0017;
+    background-repeat: no-repeat;
+
+    /* Adicional: Faz o background ficar fixo e não rolar com a página,
+       o que deixa o gradiente mais estável e bonito. */
+    background-attachment: fixed;
+
+    /* Define uma cor de texto padrão para o site, evitando texto preto em fundo escuro */
+    color: white;
+
+    /* 2. Garante que o body ocupe no mínimo a tela inteira */
+    min-height: 100vh;
+    margin: 0; /* Boa prática para zerar margens padrão do navegador */
+    padding: 0; /* Boa prática para zerar paddings padrão */
+}
+
+/* 3. Estrutura a página para o footer ficar sempre no final */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Esta regra mágica faz o conteúdo principal (main) crescer
+       para ocupar todo o espaço disponível, empurrando o footer para baixo. */
+    flex-grow: 1;
+}
+.homescreen-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+
+}
+
+.homescreen-container .left img {
+    margin-top: 3vh;
+    width: 40vw;
+    max-width: 1000px;
+    /* min-width: 700px !important; */
+    height: 75vh;
+    max-height: 1000px;
+    border-top-right-radius: 7%;
+    border-bottom-right-radius: 7%;
+
+
+}
+
+.homescreen-container .right h1 {
+    margin-left: 80px;
+}
+
+.typewritter-color {
+    color: #59F4B2;
+}
+
+.letter-color {
+    color: #1aaa6c;
+    font-weight: 650;
+
+}
+
+
+.homescreen-container .cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.acordeon {
+    width: 400px;
+
+    margin-left: 5%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+
+
+.acordeon-header {
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.acordeon-content {
+    /* Começa com altura máxima de 0 e escondido */
+    background: rgba(255, 255, 255, 0);
+    /* corzinha transparente */
+    backdrop-filter: blur(10px);
+    /* <<< BLUR */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.7s ease, padding 0.8s ease;
+    border: rgb(255, 255, 255) 2px solid;
+    border-radius: 15px;
+    padding: 0 15px;
+
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    transition: max-height 0.5s ease-in-out,
+}
+
+/* QUANDO O ACORDEÃO ESTIVER ABERTO... */
+/* O JavaScript vai adicionar a classe 'is-open' ao .acordeon-item */
+.acordeon-item.is-open .acordeon-content {
+    /* Define uma altura máxima grande o suficiente para caber qualquer conteúdo */
+    /* O JavaScript vai calcular a altura exata, mas isso serve como fallback */
+    max-height: 1000px;
+    /* Valor alto o suficiente */
+
+    /* Retorna o espaçamento para o normal */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Gira um ícone se tiver um */
+/* .acordeon-item.is-open .acordeon-trigger::after {
+} */
+
+
+.acordeon-trigger {
+    border-radius: 8px;
+    /* Adicionar bordas arredondadas ajuda no visual */
+    padding: 5px;
+}
+
+.acordeon-trigger:focus-visible {
+    outline: none;
+    border: rgb(255, 255, 255) 2px solid;
+}
+
+
+
+
+.aboutMe h2 {
+    color: white;
+    text-align: center;
+    justify-self: center;
+}
+
+.aboutMe p {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+
+}
+
+.socialMedias {
+    display: flex;
+    justify-self: center;
+    gap: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 5vh;
+    width: fit-content;
+    /* box-shadow: 0 2px 10px rgb(0, 0, 0); */
+}
+
+
+.socialMedias a {
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 20%;
+    transition: background-color 0.3s;
+
+}
+
+.socialMedias a:hover {
+    background-color: black;
+}
+
+.socialMedias a:hover svg {
+    fill: white;
+}
+
+.acordeon-content-container {
+    display: grid;
+    /* Começa com a linha do grid tendo altura zero (0fr) */
+    grid-template-rows: 0fr; 
+    
+    /* A transição agora é na propriedade grid-template-rows */
+    transition: grid-template-rows 0.5s ease-in-out;
+}
+
+
+/* QUANDO ABERTO... */
+.acordeon-item.is-open .acordeon-content-container {
+    /* A linha do grid se expande para 1 fração, que é a altura total do conteúdo. */
+    grid-template-rows: 1fr;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .homescreen-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        
+    
+    }
+
+    .homescreen-container .left img {
+        margin-top: 30px;
+        width: 100%;
+
+        height: 52vh;
+        border-radius: 7%;
+
+    }
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+    .nav-item {
+        margin-top: 2vh;
+        text-align: center;
+    }
+    .nav-link-custom {
+        margin: 0 auto;
+    }
+
+    .acordeon {
+        margin: 0;
+        width: 50%;
+        justify-self: center;
+        margin-bottom: 20px;
+    }
+    
+    .homescreen-container .right h1 {
+        padding-top: 3vh;
+        padding-left: 0px;
+        width: 238px;
+        margin: 0 auto ;
+   
+    }
+    .acordeon-header {
+        justify-self: center;
+    }
+    .acordeon-item {
+        border-bottom: 1px solid #ffffff;
+        /* width: -30vw; */
+        margin: 0 auto !important;
+    }
+    .acordeon-item {
+        justify-self: center;
+        width: 100%;
+    }
+
+    .aboutMe h2 {
+        margin-top: 3vh;
+        
+    }    
+
+}
+
+
