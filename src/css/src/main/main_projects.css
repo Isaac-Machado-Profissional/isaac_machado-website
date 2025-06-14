@@ -1,19 +1,21 @@
-/* --- CONTAINER PRINCIPAL DOS PROJETOS --- */
+/* --- CONTAINER PRINCIPAL --- */
 .projects-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os cards caso não usem align-self */
+    align-items: center;
     gap: 2rem;
     max-width: 1200px;
     margin: 5vh auto;
-    padding: 0 1rem; /* Adiciona um respiro nas laterais */
+    padding: 0 1rem;
+
 }
 
 .projects-container h3 {
     text-align: center;
-    font-size: 2.5rem; /* Usando 'rem' para mais flexibilidade */
+    font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
+
 }
 
 /* --- ESTILO DE CADA CARD DE PROJETO --- */
@@ -22,128 +24,207 @@
     align-items: center;
     gap: 1.5rem;
     background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    max-width: 800px; /* Largura máxima para desktop */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+
 }
 
 /* --- LÓGICA DO ZIGUE-ZAGUE --- */
-/* Esta lógica agora se aplicará a todas as telas */
 .project-item:nth-of-type(odd) {
     align-self: flex-start;
 }
 
 .project-item:nth-of-type(even) {
     align-self: flex-end;
-    flex-direction: row-reverse; /* Inverte a imagem e o texto */
+    flex-direction: row-reverse;
 }
 
-/* --- ITENS DENTRO DOS CARDS (IMAGEM E TEXTO) --- */
+/* --- ITENS DENTRO DOS CARDS --- */
 .project-item img {
     width: 50%;
-    aspect-ratio: 16 / 10; /* Proporção para manter a imagem uniforme */
+    /* aspect-ratio: 16 / 10; */
     object-fit: cover;
     border-radius: 4px;
+    transition: transform 0.4s ease-in-out;
+    pointer-events: none;
+
+}
+
+/* Define a origem do zoom para cada lado */
+.project-item:nth-of-type(odd) img {
+    transform-origin: left center;
+}
+
+.project-item:nth-of-type(even) img {
+    transform-origin: right center;
 }
 
 .project-item .project-info {
     width: 50%;
+    transition: opacity 0.4s ease-in-out;
+
 }
 
 .project-item .project-info h4 {
     color: #1a1a1a;
-    margin-top: 0;
     font-size: 2rem;
+    margin-top: 0;
+    margin-left: 24px;
+    margin-right: 24px;
+
 }
 
 .project-item .project-info p {
     color: #4f4f4f;
     font-size: 1rem;
+
 }
 
-
-
-
-.project-item .project-info h4 {
-    color: #1a1a1a;
-    margin-top: 0; /* Remove margem padrão do h4 */
+/* --- EFEITO NO HOVER --- */
+.project-item:hover img {
+    transform: scale(2);
+    filter: brightness(0.5);
 }
 
-.project-item .project-info p {
-    color: #4f4f4f; /* Um cinza mais suave para o texto */
+.project-item:hover .project-info {
+    opacity: 0;
+
 }
 
-.projects-container h3 {
-    text-align: center;
+/* --- BOTÕES SOBREPOSTOS --- */
+.overlay-buttons {
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    opacity: 0;
+
+    position: absolute;
+    ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 1px solid rgb(27, 27, 27);
 }
 
-.projects-container h3 {
-    text-align: center;
-    font-size: 50px;
-}
-
-/* --- ESTILO E LAYOUT DE CADA CARD (INTERNO) --- */
-.project-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-
-    /* Estilos visuais */
-    border: 1px solid #e0e0e0;
-    padding: 1.5rem;
-    border-radius: 8px;
-    background-color: #fdfdfd;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-
-    /* O card não deve exceder a largura do container */
-    max-width: 800px;
-}
-
-/* --- CONTROLE DO ZIGUE-ZAGUE --- */
-/* Alinha o primeiro projeto (A) à ESQUERDA dentro do container */
-.project-item:nth-of-type(1) {
-    align-self: flex-start;
-}
-
-/* Alinha o segundo projeto (B) à DIREITA dentro do container */
-.project-item:nth-of-type(2) {
-    align-self: flex-end;
-    flex-direction: row-reverse;
-    /* Inverte a imagem e o texto */
-}
-
-/* Se você adicionar mais projetos, pode alternar o padrão assim: */
-/* Alinha projetos ímpares (1, 3, 5...) à esquerda */
-.project-item:nth-of-type(odd) {
-    align-self: flex-start;
-}
-
-/* Alinha projetos pares (2, 4, 6...) à direita e inverte a ordem */
-.project-item:nth-of-type(even) {
-    align-self: flex-end;
-    flex-direction: row-reverse;
-}
-
-
-/* --- ESTILOS DOS ITENS DENTRO DOS CARDS --- */
-.project-item img {
-    width: 50%;
+.modal-site-preview {
+    width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 4px;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
-.project-item .project-info {
-    width: 50%;
+
+
+.project-item:hover .overlay-buttons {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, z-index 0s 0.3s ease-in-out;
 }
 
-.project-item .project-info h4 {
-    color: rgb(7, 7, 7);
+
+.glightbox-hidden {
+    display: none;
+}
+
+.project-modal-content {
+    padding: 2rem 2rem 0px 2rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    color: black;
+}
+
+.project-modal-content h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
 
 }
 
-.project-item .project-info p {
-    color: rgb(26, 26, 26);
+.project-modal-content p {
+    color: black;
+    background-color: none;
+
 }
+
+.gslide-desc {
+    color: black;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem;
+}
+
+.modal-buttons {
+    display: flex;
+    /* Alinha os botões lado a lado */
+    /* Espaçamento entre os botões */
+    margin-top: 1.5rem;
+    
+}
+
+.modal-buttons a {
+    text-decoration: none;
+}
+
+.modal-buttons svg {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Estilo principal do botão (aplicado na tag <a>) */
+.modal-buttons .btn-modal {
+    display: inline-flex;
+    gap: 1rem;
+
+    /* Essencial para alinhar o SVG e o texto */
+    align-items: center;
+    justify-content: center;
+
+    background-color: #4f4f4f;
+    color: white;
+    text-decoration: none;
+
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+/* Efeito Hover: muda a cor de fundo ao passar o mouse */
+.modal-buttons .btn-modal:hover {
+    background-color: #6a6a6a;
+}
+
+/* Efeito Active: o botão parece ser pressionado */
+.modal-buttons .btn-modal:active {
+    transform: scale(0.98);
+}
+
+/* Acessibilidade: adiciona um contorno visível ao focar com o teclado */
+.modal-buttons .btn-modal:focus-visible {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
+}
+
+/* Estilo para o SVG DENTRO do botão */
