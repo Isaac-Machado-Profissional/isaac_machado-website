@@ -1,32 +1,43 @@
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
     /* Diminui a largura máxima do card para que o zigue-zague apareça */
     .project-item {
-        max-width: 90%; /* Ocupa 90% da largura da tela */
-        
+        max-width: 100%;
+        /* Ocupa 90% da largura da tela */
+
         /* MUITO IMPORTANTE: Empilha a imagem e o texto DENTRO do card */
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     /* Nos cards pares, removemos a inversão da direção interna,
        pois agora todos são verticais. Apenas o alinhamento (flex-end) permanece. */
     .project-item:nth-of-type(even) {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     /* A imagem agora ocupa toda a largura do card */
     .project-item img {
-        width: 100%; 
+        width: 100%;
     }
 
     /* O bloco de informações também ocupa toda a largura */
     .project-item .project-info {
         width: 100%;
-        text-align: center; /* Centraliza o texto para um visual mais limpo */
+        text-align: center;
+        /* Centraliza o texto para um visual mais limpo */
     }
 
     /* Reduz o tamanho da fonte do título principal */
-    .projects-container h3 {
+    .project-info h4 {
         font-size: 2rem;
     }
+
+    .project-item:nth-of-type(odd) img {
+        transform-origin: center center;
+    }
+
+    .project-item:nth-of-type(even) img {
+        transform-origin: center center;
+    }
+
 }

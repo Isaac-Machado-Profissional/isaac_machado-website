@@ -176,7 +176,7 @@
     /* Alinha os botões lado a lado */
     /* Espaçamento entre os botões */
     margin-top: 1.5rem;
-    
+
 }
 
 .modal-buttons a {
@@ -186,6 +186,7 @@
 .modal-buttons svg {
     width: 30px;
     height: 30px;
+    stroke: #1aaa6c;
 }
 
 
@@ -198,7 +199,7 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #4f4f4f;
+    background-color: rgb(39, 39, 39);
     color: white;
     text-decoration: none;
 
@@ -210,21 +211,14 @@
     transition: background-color 0.2s ease-in-out, transform 0.1s ease;
 }
 
-/* Efeito Hover: muda a cor de fundo ao passar o mouse */
+
+
+
+.modal-links a:hover svg {
+    stroke: #ffffff;
+}
+
 .modal-buttons .btn-modal:hover {
-    background-color: #6a6a6a;
-}
+    background-color: #1aaa6c;
 
-/* Efeito Active: o botão parece ser pressionado */
-.modal-buttons .btn-modal:active {
-    transform: scale(0.98);
 }
-
-/* Acessibilidade: adiciona um contorno visível ao focar com o teclado */
-.modal-buttons .btn-modal:focus-visible {
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
-}
-
-/* Estilo para o SVG DENTRO do botão */
