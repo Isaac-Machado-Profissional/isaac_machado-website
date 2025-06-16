@@ -9,15 +9,14 @@
 
 .formation-container h3 {
     text-align: center;
-    font-size: 50px;
 }
 
 .formation-container h4 {
-    margin-top: 50px;
     margin-bottom: 10px;
-    margin-left: 20%;
+    margin-left: 22%;
 
 }
+
 
 .formation-container h5 {
     margin-left: 25%;
@@ -66,4 +65,42 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.formation-content {
+    position: relative;
+    /* cria o contexto para o absolute */
+    /* afasta todo o conteúdo da linha */
+    margin-top: 50px;
+    /* se você quiser espaçamento entre blocos */
+}
+
+.formation-content .date-line {
+    top: 0;
+    /* começa no topo do bloco */
+    bottom: 0;
+    /* estica até o final do bloco */
+    margin-left: 22%;
+    /* ajusta o 2025 pra ficar à esquerda da linha */
+
+    width: 2px;
+    /* espessura da linha */
+    background-color: #ccc;
+    /* cor da linha */
+}
+
+.formation-content .date-line .year {
+    top: 0;
+    /* fixa o texto lá em cima */
+    background: none;
+    /* remova fundo se não precisar */
+    color: white;
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    width: 90px;
 }

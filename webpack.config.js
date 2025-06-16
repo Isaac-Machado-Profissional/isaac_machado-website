@@ -13,13 +13,13 @@ const entryPoints = pages.reduce((acc, page) => {
   // Assumindo que o nome do JS é o mesmo do HTML
   acc[page] = `./src/javascript/import/${page}.js`;
   return acc;
-}, {}); 
+}, {});
 
 module.exports = {
   // Use o objeto de entradas que criamos
   entry: entryPoints,
   output: {
-    path: path.resolve(__dirname, 'docs'),
+    path: path.resolve(__dirname, 'dist'),
     // Passo 2: Use [name] para criar um bundle para cada entrada
     filename: 'javascript/[name].bundle.js',
     publicPath: '/',
@@ -45,11 +45,11 @@ module.exports = {
 
     // Passo 3: Diga a cada HTML qual chunk (JS) ele deve usar
     ...pages.map(page => new HtmlWebpackPlugin({
-        template: `./src/html/${page}.html`,
-        filename: `${page}.html`,
-        inject: true,
-        chunks: [page] // Conecta 'index.html' com 'index.bundle.js', e assim por diante.
-      })
+      template: `./src/html/${page}.html`,
+      filename: `${page}.html`,
+      inject: true,
+      chunks: [page] // Conecta 'index.html' com 'index.bundle.js', e assim por diante.
+    })
     ),
 
     new CopyWebpackPlugin({
@@ -67,11 +67,9 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: [ {
-        // Serve os arquivos estáticos do diretório 'public'
-        directory: path.resolve(__dirname, 'public'),
-         directory: path.resolve(__dirname, 'docs'),
-        directory: path.resolve(__dirname, 'src/html'),
+    static: [{
+      // Serve os arquivos estáticos do diretório 'public'
+      directory: path.resolve(__dirname, 'dist'),
     }
 
     ],
@@ -79,5 +77,5 @@ module.exports = {
     open: true,
     hot: true,
   },
-  mode: 'production',
+  mode: 'development',
 };

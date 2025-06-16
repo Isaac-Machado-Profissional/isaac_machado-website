@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+    .skills-items {
+        width: 80%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+
+    .skills-nav {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* <- centraliza os botões */
+        margin: 0 auto;
+        width: 100%;
+        gap: 10px;
+        /* opcional: espaço entre os botões */
+        margin-bottom: 5vh;
+    }
+
+    .skills-nav button {
+        width: 100%;
+        max-width: 300px;
+        /* limita a largura no centro */
+        text-align: center;
+    }
+
+    .formation-content .date-line {
+        top: 0;
+        /* começa no topo do bloco */
+        bottom: 0;
+        /* estica até o final do bloco */
+        margin-left: 0%;
+        /* ajusta o 2025 pra ficar à esquerda da linha */
+
+        width: 2px;
+        /* espessura da linha */
+        background-color: #ccc;
+        /* cor da linha */
+
+    }
+
+
+    .formation-container h4 {
+        margin-left: 0% !important;
+        color: red;
+        /* use !important se necessário, temporariamente */
+    }
+
+    div.formation-container>h4 {
+        margin-left: 0% !important;
+        color: red !important;
+    }
+
+
+}

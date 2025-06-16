@@ -9,7 +9,6 @@
 
 .skills-container h3 {
     text-align: center;
-    font-size: 48px;
 }
 
 
@@ -17,14 +16,106 @@
     color: black;
 }
 
-.skills-items {
-    width: 100%;
-    padding: 20px;
-    margin-top: 20px;
-}
 
+.skills-row {
+    min-height: 500px;
+    /* ou algo que cubra o maior grupo visível */
+    transition: all 0.3s ease;
+}
 
 .card-title {
     font-size: 20px !important;
     font-weight: bold;
 }
+
+
+
+.skills-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    gap: 10px;
+}
+
+.skills-nav button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.5 ease-in-out;
+}
+
+.skills-nav button:hover,
+.skills-nav button:focus-visible {
+    transform: scale(1.05);
+}
+
+
+/* estado “apertado” */
+
+.skills-nav button.active {
+    /* você pode escurecer um pouco a cor para dar sensação de pressão */
+    background-color: #1aaa6c;
+    /* tom ligeiramente mais escuro que #1aaa6c */
+    color: white;
+    font-weight: bold;
+    outline: #1aaa6c;
+}
+
+.skill-card {
+
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    height: 350px;
+
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card .card-body p {
+    opacity: 0;
+}
+
+
+
+.skill-card:hover .card-body p {
+    opacity: 1;
+}
+
+.skill-card:hover .card-body {
+    opacity: 1;
+}
+
+.skill-card:hover img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.skill-card:hover h4 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.skill-card .card-body p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6); /* opcional: fundo translúcido */
+    color: white;
+}
+
+

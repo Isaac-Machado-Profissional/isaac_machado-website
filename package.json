@@ -33,6 +33,7 @@
     "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
-    "framer-motion": "^12.9.2"
+    "framer-motion": "^12.9.2",
+    "mixitup": "^3.3.2"
   }
 }

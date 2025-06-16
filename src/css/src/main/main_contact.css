@@ -56,33 +56,39 @@
     width: 100%;
 }
 
-.contact-background .form-control {
+
+.form-control {
+    box-shadow: none;
+    /* Remove a sombra de foco padrão */
+    outline: none;
+    /* Remove o contorno padrão */
+    transition: box-shadow 0.3s ease-in-out;
     background-color: rgb(39, 39, 39);
+    box-shadow: 4px 4px 0px 4px rgb(39, 39, 39);
+    color: white;
+
     transition: background-color 0.3s ease-in-out;
     border: none;
 }
 
-.contact-background .form-control:focus {
-    background-color: rgb(255, 255, 255);
-}
 
-
-.form-control {
-    box-shadow: none; /* Remove a sombra de foco padrão */
-    outline: none; /* Remove o contorno padrão */
-    transition: box-shadow 0.3s ease-in-out;
-}
 .form-control:focus {
-    box-shadow: none; /* Remove a sombra de foco padrão */
-    outline: none; /* Remove o contorno padrão */
+    box-shadow: none;
+    /* Remove a sombra de foco padrão */
+    outline: none;
+    /* Remove o contorno padrão */
     border: none;
-    box-shadow: 3px 2px 0px 4px rgb(39, 39, 39);
+    box-shadow: 4px 4px 0px 4px rgb(39, 39, 39);
+    background-color: rgb(255, 255, 255);
+
 }
 
 .form-control.personalization {
     background-color: transparent;
-    border-radius: 0; /* Remove os cantos arredondados */
-    box-shadow: none; /* Remove a sombra de foco padrão */
+    border-radius: 0;
+    /* Remove os cantos arredondados */
+    box-shadow: none;
+    /* Remove a sombra de foco padrão */
     outline: none;
     border: none;
     color: white;
@@ -90,6 +96,7 @@
     transition: border-color 0.3s ease-in-out;
 
 }
+
 
 .form-control::placeholder {
     color: white;
@@ -101,13 +108,11 @@
 .form-control.personalization:focus {
     /* A barrinha fica branca e sólida, indicando que o campo está ativo */
     border-bottom-color: white;
-    
+
     box-shadow: none;
     background-color: transparent;
 
 }
-
-
 
 
 .personalization::placeholder {
@@ -116,7 +121,7 @@
 }
 
 .send-button {
-    margin-top: 2px;
+    margin-top: 1rem;
     background-color: #11c05f;
     /* Usando uma cor que você já tem no site */
     border: none;

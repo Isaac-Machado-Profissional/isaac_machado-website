@@ -12,8 +12,6 @@
 
 .projects-container h3 {
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: 600;
     margin-bottom: 1rem;
 
 }
@@ -85,21 +83,32 @@
 }
 
 /* --- EFEITO NO HOVER --- */
-.project-item:hover img {
+.project-item:hover img,
+.project-item:focus-within img {
     transform: scale(2);
     filter: brightness(0.5);
 }
 
-.project-item:hover .project-info {
+.project-item:hover .project-info,
+.project-item:focus-within .project-info {
     opacity: 0;
 
 }
 
+.project-item:hover .overlay-buttons,
+.project-item:focus-within .overlay-button {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, z-index 0s 0.3s ease-in-out;
+}
+
+
+
 /* --- BOTÕES SOBREPOSTOS --- */
 .overlay-buttons {
     padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.527);
-    color: white;
+    background-color: white;
+    color: #1aaa6c;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -111,7 +120,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    outline: 1px solid rgb(27, 27, 27);
+}
+
+.overlay-buttons:focus {
+    outline: 2px solid white;
+    outline-offset: 4px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.overlay-buttons:hover {
+    background: #1aaa6c;
+    color: white;
 }
 
 .modal-site-preview {
@@ -123,12 +143,6 @@
 }
 
 
-
-.project-item:hover .overlay-buttons {
-    opacity: 1;
-    z-index: 1;
-    transition: opacity 0.3s ease-in-out, z-index 0s 0.3s ease-in-out;
-}
 
 
 .glightbox-hidden {
