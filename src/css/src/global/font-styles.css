@@ -1,4 +1,10 @@
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     color: white;
 }
 
@@ -9,4 +15,14 @@ h3 {
 h4 {
     font-size: 40px;
     font-weight: 600;
+}
+
+a {
+    color: #1aaa6c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1a8a5c;
+
 }

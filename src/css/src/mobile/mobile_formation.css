@@ -6,7 +6,7 @@
         width: 90%;
         border-radius: 10px;
     }
-    
+
 
 
     /* Diminui o tamanho dos ícones no mobile */
@@ -18,6 +18,86 @@
     /* Diminui o tamanho da fonte no mobile para combinar */
     .extracurricular-item h6 {
         font-size: 0.8rem;
+    }
+
+    .formation-content .date-line {
+        top: 0;
+        /* começa no topo do bloco */
+        bottom: 0;
+        /* estica até o final do bloco */
+        margin-left: 10%;
+        /* ajusta o 2025 pra ficar à esquerda da linha */
+
+        width: 2px;
+        /* espessura da linha */
+        background-color: #ccc;
+        /* cor da linha */
+
+    }
+
+
+    .formation-container h4 {
+        margin-left: 10%;
+        /* use !important se necessário, temporariamente */
+    }
+
+    .formation-content {
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .formation-content .date-line {
+        position: absolute;
+        /* necessário para ocupar o lado esquerdo */
+        top: -40px;
+        bottom: 0;
+        left: -20px;
+        /* ajusta a posição horizontal da linha */
+        width: 2px;
+        background-color: #ccc;
+        z-index: 0;
+        /* opcional, para garantir que fique atrás do conteúdo */
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+    }
+
+
+
+    .formation-content {
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .formation-content .date-line {
+        position: absolute;
+        top: -10px;
+        /* margin-top: 40px; */
+        bottom: 0;
+        left: -5px;
+        width: 2px;
+        background-color: aliceblue;
+        z-index: 0;
+    }
+
+    .formation-content .date-line .year {
+        position: absolute;
+        top: -40px;
+        left: 30px;
+        /* Centraliza horizontalmente dentro da .date-line */
+        transform: translateX(-50%);
+        /* Move metade da própria largura para a esquerda */
+        background: none;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+        width: 120px;
+        border: 2px solid white;
+        border-radius: 8px;
+        text-align: center;
+        z-index: 1;
     }
 
 

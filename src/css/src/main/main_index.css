@@ -2,12 +2,10 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-
-
 }
 
 .homescreen-container .left img {
-    margin-top: 3vh;
+    margin-top: 2vh;
     width: 40vw;
     max-width: 1000px;
     /* min-width: 700px !important; */
@@ -19,6 +17,33 @@
 
 }
 
+.hidden-img {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Ao carregar, vira visível com tamanho normal */
+.visible-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.homescreen-container .right {
+    min-height: 160px;
+}
+
+#profile-img {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#profile-img.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .homescreen-container .right h1 {
     margin-left: 80px;
 }
@@ -28,7 +53,7 @@
 }
 
 .letter-color {
-    color: #1aaa6c;
+    color: #59F4B2;
     font-weight: 650;
 
 }
@@ -185,3 +210,6 @@
     /* A linha do grid se expande para 1 fração, que é a altura total do conteúdo. */
     grid-template-rows: 1fr;
 }
+
+
+

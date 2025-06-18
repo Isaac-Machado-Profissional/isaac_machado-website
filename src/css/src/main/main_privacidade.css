@@ -1,0 +1,14 @@
+.privacidade-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.privacidade-container p {
+    margin: 20px 50px 20px 50px;
+}
+
+.privacidade-container li {
+    margin: 20px 50px 20px 50px;
+}

@@ -120,6 +120,17 @@
     opacity: 1;
 }
 
+
+.consent-checkbox a {
+    color: rgb(173, 173, 173);
+}
+.consent-checkbox a:hover {
+    color: #afafaf;
+    text-decoration: underline;
+}
+
+
+
 .send-button {
     margin-top: 1rem;
     background-color: #11c05f;

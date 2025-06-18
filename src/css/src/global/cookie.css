@@ -1,0 +1,130 @@
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+    /* Começa escondido e fora da tela */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    /* Evita clique enquanto oculto */
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    #cookie-banner {
+        max-width: 80%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Centraliza horizontalmente com left/right 0 */
+    }
+}
+
+#cookie-banner.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#cookie-banner p {
+    margin-bottom: 10px;
+    /* Espaço entre texto e botões */
+}
+
+
+#cookie-banner button {
+    margin-top: 10px;
+    /* Espaço acima dos botões */
+    /* Estilos dos botões do banner */
+    background-color: #1aaa6c;
+    /* Cor mais amigável para aceitar/configurar */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#cookie-banner button:hover {
+    background-color: #1a8a5c;
+}
+
+
+/* MODAL SWEETALERT2: */
+
+.swal2-cookie-settings-popup {
+    max-width: 400px;
+    /* Limita a largura do popup */
+    text-align: left;
+}
+
+.swal2-cookie-settings-popup label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.swal2-cookie-settings-popup input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.swal2-cookie-settings-popup {
+    background-color: #fdfdfd;
+    /* Cor de fundo do modal */
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+}
+
+.swal2-html-container p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.swal2-confirm {
+    background-color: #1aaa6c !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.swal2-confirm:hover {
+    background-color: #1a8a5c !important;
+    transform: scale(1.05);
+
+}
+
+
+
+.swal2-cancel {
+    background-color: #ccc !important;
+    color: #333 !important;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+
+}
+
+.swal2-cancel:hover {
+    background-color: #c0c0c0 !important;
+    transform: scale(1.05);
+
+}
+
+
+
+/* Fundo escurecido */
+.swal2-backdrop-show {
+    background: rgba(0, 0, 0, 0.5) !important;
+}

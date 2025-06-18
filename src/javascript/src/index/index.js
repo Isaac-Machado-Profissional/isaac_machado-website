@@ -7,9 +7,9 @@ initGradientRestart();
 initAcordeonWithScroll();
 
 startTypewriter("typewriter", [
-    "Desenvolvedor WEB. ",
+    "Desenvolvedor WEB ",
     "Desenvolvedor Front-END ",
     "Desenvolvedor Back-END ",
-    " "
+    "Designer ",
+    "cara do T.I "
 ]);
-

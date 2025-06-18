@@ -6,7 +6,7 @@ const path = require('path');
 
 const PORTA = 9000;
 
-const pages = ['index', 'contact', 'formation', 'skills', 'projects'];
+const pages = ['index', 'contact', 'formation', 'skills', 'projects', 'privacidade'];
 
 // Passo 1: Criar o objeto de pontos de entrada dinamicamente
 const entryPoints = pages.reduce((acc, page) => {

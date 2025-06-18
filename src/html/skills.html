@@ -74,255 +74,289 @@
     </header>
 
     <main>
-        <div class="skills-container">
+        <div class="skills-container container">
             <h3>Habilidades</h3>
-            <div class="skills-items container">
+            <div class="skills-items" data-aos="fade-up">
 
-            </div>
-            <div class="skills-nav controls">
-                <button type="button" data-filter=".front-end">Front-END</button>
-                <button type="button" data-filter=".back-end">Back-END</button>
-                <button type="button" data-filter=".design">Design & Prototipagem</button>
-                <button type="button" data-filter=".banco-de-dados">Banco de Dados</button>
-            </div>
-
-            <div class="row skills-row g-4">
-                <div class="col-12 col-sm-4 col-md-3 mix front-end back-end">
-                    <div class="card skill-card flex-fill p-2 card">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone amarelo do JavaScript">
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">JavaScript</h4>
-                            <p>
-                                Controle de funções, condicionais, bibliotecas, pesquisas, animações e aplicações e bibliotecas voltadas ao Front-END, mas que confesso ter muita vontade de continuar a aprendendo por se tratar de uma linguagem muito completa.
-                            </p>
-
-                        </div>
-                    </div>
+                <div class="skills-nav controls">
+                    <button type="button" data-group="front-end">Front-END</button>
+                    <button type="button" data-group="back-end">Back-END</button>
+                    <button type="button" data-group="design">Design & Prototipagem</button>
+                    <button type="button" data-group="banco-de-dados">Banco de Dados</button>
                 </div>
 
-                <div class="col-12 col-sm-4 col-md-3 mix mix back-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone do Java">
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Java</h4>
-                            <p>
-                                Domínio básico do Java, mas com experiência avançada em SpringBoot.
-                            </p>
+                <div class="row skills-row g-4">
 
+                    <div class="col-12 col-md-4 col-lg-3 mix" data-groups='["front-end", "back-end"]'>
+                        <div class="card skill-card flex-fill p-2 card">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone amarelo do JavaScript">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">JavaScript</h4>
+                                <p>
+                                    Controle de funções, condicionais, bibliotecas, pesquisas, animações e aplicações de
+                                    bibliotecas voltadas ao front-end e o back-end mas que confesso ter muita vontade de
+                                    continua
+                                    aprendendo por se tratar de uma linguagem muito completa.
+                                </p>
 
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix back-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone do Python">
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Python</h4>
-                            <p>
-                                Domínio avançado do Python e sua semância, experiênciando bibliotecas como pandas, numpy, dentre outras. Aplicações utilizando Frameworks como Django e FastAPI.
-                            </p>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card" data-groups='["back-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone do Java">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Java</h4>
+                                <p>
+                                    Domínio básico do Java, mas com experiência avançada em SpringBoot.
+                                </p>
 
+
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone laranja do HTML5">
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">HTML5</h4>
-                            <p>
-                                Domínio avançado do HTML, com uma larga experiência em aplicações, entendimento de sua semântica e de boas práticas, garantindo um bom trabalho em acessibiliade e SEO.
-                            </p>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["back-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone do Python">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Python</h4>
+                                <p>
+                                    Domínio avançado do Python e sua semância, experienciando bibliotecas como pandas,
+                                    numpy, dentre outras. Aplicações utilizando Frameworks como Django e FastAPI.
+                                </p>
 
-
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone azul do CSS3">
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">CSS3</h4>
-                            <p>
-                                Domínio intermediário com aplicações mantendo boas práticas de acessibilidade e WEB Design.
-                            </p>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["front-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone laranja do HTML5">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">HTML5</h4>
+                                <p>
+                                    Domínio avançado do HTML, com uma larga experiência em aplicações, entendimento de
+                                    sua
+                                    semântica e de boas práticas, garantindo um bom trabalho em acessibiliade e SEO.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone roxo do Bootstrap">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Bootstrap</h4>
-                            <p>
-                                Dominio intermediário da utilização do Framework Bootstrap. Ainda tentando encontrar o seu limite!
-                            </p>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["front-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone azul do CSS3">
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">CSS3</h4>
+                                <p>
+                                    Domínio intermediário com aplicações mantendo boas práticas de acessibilidade e WEB
+                                    Design.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["front-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone roxo do Bootstrap">
 
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix back-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
-                            class="card-img-top img-fluid" alt="Ícone do Node.Js">
-
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Node.Js</h4>
-                            <p>
-                                Domínio intermediário desta plataforma de desenovlvimento com JavaScript, e diversas utilizações de bibliotecas com seu gerenciador de depêndencias e mantenedor de versões NPM.
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Bootstrap</h4>
+                                <p>
+                                    Dominio intermediário da utilização do Framework Bootstrap. Ainda tentando encontrar
+                                    o
+                                    seu limite!
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix back-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-                            class="card-img-top img-fluid" alt="Express">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Express</h4>
-                            <p>
-                                Domínio intermediário do Express, com experiência em aplicações rodando APIs RESTful, como a API do Instagram e outras aplicações do lado do back-end.
-                            </p>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["back-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
+                                class="card-img-top img-fluid" alt="Ícone do Node.Js">
+
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Node.Js</h4>
+                                <p>
+                                    Domínio intermediário desta plataforma de desenovlvimento com JavaScript, e diversas
+                                    utilizações de bibliotecas com seu gerenciador de depêndencias e mantenedor de
+                                    versões
+                                    NPM.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix back-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
-                            class="card-img-top img-fluid" alt="Ícone verde do Django">
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["back-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+                                class="card-img-top img-fluid" alt="Express">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Django</h4>
-                            <p>
-                                Domínio básico do Django, mas com experiência de sua funcionalidade e noção do seu poder de aceleração.
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Express</h4>
+                                <p>
+                                    Domínio intermediário do Express, com experiência em aplicações rodando APIs
+                                    RESTful, como a API do Instagram e outras aplicações do lado do back-end
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix back-end">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-plain.svg"
-                            class="card-img-top img-fluid" alt="CSS3">
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["back-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
+                                class="card-img-top img-fluid" alt="Ícone verde do Django">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">FastAPI</h4>
-                            <p>
-                                Domínio básico do FastAPI, que também já tive experiência e notei sua capacidade de aceleração e facilidade de uso.
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Django</h4>
+                                <p>
+                                    Domínio básico do Django, mas com experiência de sua funcionalidade e noção do seu
+                                    poder
+                                    de aceleração.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix banco-de-dados">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
-                            class="card-img-top img-fluid" alt="Ícone folha verde do MongoDB">
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["back-end"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-plain.svg"
+                                class="card-img-top img-fluid" alt="CSS3">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">MongoDB</h4>
-                            <p>
-                                Domínio avaçado deste banco de dados com experiências de armazenagem de documentos, keys, pk. Também servindo JSONs online com Google Cloud/Shell 
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">FastAPI</h4>
+                                <p>
+                                    Domínio básico do FastAPI, que também já tive experiência e notei sua capacidade de
+                                    aceleração e facilidade de uso.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["banco-de-dados"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+                                class="card-img-top img-fluid" alt="Ícone folha verde do MongoDB">
 
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix banco-de-dados">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone golfinho azul do MySQL">
-
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">MySQL</h4>
-                            <p>
-                                Domínio básico deste banco de dados, mas com experiência em criações de tabelas, seus relacionamentos, primary keys, foreign keys e sua vasta capacidade, que pode ser aumentada tanto verticalmente(mais computadores) quanto horizontalmente(mais computadores on cloud em servidores online).
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">MongoDB</h4>
+                                <p>
+                                    Domínio avaçado deste banco de dados com experiências de armazenagem de documentos,
+                                    keys, pk. Também servindo JSONs online com Google Cloud/Shell
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end design">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone azul do Photoshop">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Photoshop</h4>
-                            <p>
-                                Utilização intermediária do Photoshop para construção de imagens, desenhos, restauração de fotos, manipulação de imagens e criação de artes digitais, com mouse.
-                            </p>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["banco-de-dados"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone golfinho azul do MySQL">
+
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">MySQL</h4>
+                                <p>
+                                    Domínio básico deste banco de dados, mas com experiência em criações de tabelas,
+                                    seus relacionamentos, primary keys, foreign keys e sua vasta capacidade, que pode
+                                    ser aumentada tanto verticalmente(maior poder em um computador) quanto
+                                    horizontalmente(mais
+                                    computadores on cloud em servidores online).
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end design">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="./assets/logos/logo_premiere-pro.png" class="card-img-top img-fluid"
-                            alt="Ícone laranja do Premiere Pro">
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix " data-groups='["front-end", "design"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone azul do Photoshop">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Premiere</h4>
-                            <p>
-                                Domíno básico do Premiere, mas com experiência em edição de vídeos, cortes e tratamento de áudio. 
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Photoshop</h4>
+                                <p>
+                                    Utilização intermediária do Photoshop para construção de imagens, desenhos,
+                                    restauração
+                                    de fotos, manipulação de imagens e criação de artes digitais, com mouse.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end design">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
-                            class="card-img-top img-fluid" alt="ícone azul do Canva">
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["front-end", "design"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="./assets/logos/logo_premiere-pro.png" class="card-img-top img-fluid"
+                                alt="Ícone laranja do Premiere Pro">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Canva</h4>
-                            <p>
-                                Domínio avançado do Canva, com experiência em criação de artes digitais, logotipos, banners, animações, vídeos, reuniões, posts para redes sociais e outros tipos de artes gráficas.
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Premiere</h4>
+                                <p>
+                                    Domíno básico do Premiere, mas com experiência em edição de vídeos, cortes e
+                                    tratamento
+                                    de áudio.
+                                </p>
 
 
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-4 col-md-3 skill-card mix front-end design">
-                    <div class="card skill-card flex-fill p-2">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-                            class="card-img-top img-fluid" alt="Ícone do Figma">
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["front-end", "design"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="./assets/logos/logo_canva.png" class="card-img-top img-fluid"
+                                alt="ícone azul do Canva">
 
-                        <div class="card-body d-flex flex-column">
-                            <h4 class="card-title text-center">Figma</h4>
-                            <p>
-                                Domínio avançado com o Figma, com experiência em prototipagem de interfaces(UI) visando uma boa experiência do usuário(UX) em todas as plataformas. Além de sua devida integração e comunicação com a equipe de desenvolvimento do projeto.
-                            </p>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Canva</h4>
+                                <p>
+                                    Domínio avançado do Canva, com experiência em criação de artes digitais, logotipos,
+                                    banners, animações, vídeos, reuniões, posts para redes sociais e outros tipos de
+                                    artes
+                                    gráficas.
+                                </p>
 
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3 mix skill-card mix" data-groups='["front-end", "design"]'>
+                        <div class="card skill-card flex-fill p-2">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                                class="card-img-top img-fluid" alt="Ícone do Figma">
+
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title text-center">Figma</h4>
+                                <p>
+                                    Domínio avançado no Figma, com experiência em prototipagem de interfaces(UI) visando
+                                    uma
+                                    boa experiência do usuário(UX) em todas as plataformas, como em tablets, celulares,
+                                    televisões e computadores. Além de sua devida integração e comunicação com a equipe
+                                    de
+                                    desenvolvimento.
+                                </p>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -333,7 +367,22 @@
 
     <footer>
         <p>© 2025 Isaac Machado</p>
+        <p>
+            <br>
+            <a href="./privacidade.html">Política de privacidade</a>
+        </p>
     </footer>
+
+    <div id="cookie-banner">
+        <p>
+            Uso de tecnologias essenciais para melhorar a sua experiência. <br>
+            <a href="/privacidade.html">Saiba mais</a>
+        </p>
+        <button id="btn-settings">Configurações</button>
+        <button id="btn-accept">Aceitar</button>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

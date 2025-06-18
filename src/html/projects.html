@@ -15,7 +15,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
     <link href="./styles/projects.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
 </head>
 
@@ -23,12 +23,10 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container-fluid">
-
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile"
                     aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse r" id="navbarMobile">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
@@ -73,21 +71,20 @@
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>
         <div class="projects-container">
             <h3>Projetos</h3>
 
-            <div class="project-item">
+            <div class="project-item" data-aos="fade-left">
                 <img src="./assets/projects/project-isaac-machado.png"
                     alt="Preview do projeto do website Isaac Machado">
-
                 <div class="project-info">
                     <h4>Isaac Machado</h4>
                 </div>
-                <a href="#project-modal-isaac" class="glightbox overlay-buttons" role="button" tabindex="0" aria-label="Abrir detalhes do projeto Isaac Machado">
+                <a href="#project-modal-isaac" class="glightbox overlay-buttons" role="button" tabindex="0"
+                    aria-label="Abrir detalhes do projeto Isaac Machado">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-align-center-icon lucide-align-center">
@@ -96,18 +93,16 @@
                         <path d="M21 6H3" />
                     </svg>
                 </a>
-
             </div>
 
-            <div class="project-item">
+            <div class="project-item" data-aos="fade-right">
                 <img src="./assets/projects/project-parque-dos-bufalos.png"
                     alt="Preview do projeto website Parque dos Búfalos">
-
                 <div class="project-info">
                     <h4>Parque dos Búfalos</h4>
                 </div>
-
-                <a href="#project-modal-parquedosbufalos" class="glightbox overlay-buttons" role="button" tabindex="0" aria-label="Abrir detalhes do projeto Parque dos Búfalos">
+                <a href="#project-modal-parquedosbufalos" class="glightbox overlay-buttons" role="button" tabindex="0"
+                    aria-label="Abrir detalhes do projeto Parque dos Búfalos">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-align-center-icon lucide-align-center">
@@ -116,18 +111,14 @@
                         <path d="M21 6H3" />
                     </svg>
                 </a>
-
             </div>
 
-            <div class="project-item">
+            <div class="project-item" data-aos="fade-right">
                 <img src="./assets/projects/project-c.jpg" alt="Preview do Projeto C">
-
                 <div class="project-info">
                     <p>Logo menos novos projetos!</p>
                 </div>
             </div>
-
-
         </div>
     </main>
 
@@ -136,7 +127,6 @@
             <div class="project-modal-content">
                 <h2>Website Isaac Machado</h2>
                 <p><i>Site portfólio.</i></p>
-
                 <div class="modal-buttons">
                     <div class="modal-links">
                         <a href="https://www.isaac-machado.me/" target="_blank" class="btn-modal">
@@ -149,7 +139,6 @@
                             </svg>
                             Site
                         </a>
-
                         <a href="https://github.com/Isaac-Machado-Profissional/isaac_machado-website#" target="_blank"
                             class="btn-modal">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -163,7 +152,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="project-modal-image">
                 <img src="./assets/projects/project-isaac-machado_full.jpeg" alt="Visual completo do site Isaac Machado"
                     class="modal-site-preview">
@@ -176,7 +164,6 @@
             <div class="project-modal-content">
                 <h2>Website Parque dos Búfalos</h2>
                 <p><i>Site institucional.</i></p>
-
                 <div class="modal-buttons">
                     <div class="modal-links">
                         <a href="https://parquedosbufalos.com.br/" target="_blank" class="btn-modal">
@@ -189,7 +176,6 @@
                             </svg>
                             Site
                         </a>
-
                         <a href="https://github.com/demostenesbr/parquedosbufalos" target="_blank" class="btn-modal">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
@@ -201,19 +187,31 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="project-modal-image">
                     <img src="./assets/projects/project-parque-dos-bufalos_full.jpeg"
                         alt="Visual completo do site Parque dos Búfalos" class="modal-site-preview">
                 </div>
-
             </div>
         </div>
     </div>
 
     <footer>
         <p>© 2025 Isaac Machado</p>
+        <p>
+            <br>
+            <a href="./privacidade.html">Política de privacidade</a>
+        </p>
     </footer>
+
+    <div id="cookie-banner">
+        <p>
+            Uso de tecnologias essenciais para melhorar a sua experiência. <br>
+            <a href="/privacidade.html">Saiba mais</a>
+        </p>
+        <button id="btn-settings">Configurações</button>
+        <button id="btn-accept">Aceitar</button>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -223,7 +221,10 @@
         integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
         crossorigin="anonymous"></script>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="seu_script_principal.js"></script>
+
+</body>
 
 </html>

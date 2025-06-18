@@ -40,4 +40,9 @@
         transform-origin: center center;
     }
 
+    .modal-buttons {
+        padding: 0px;
+        gap: 0px;
+    }
+
 }

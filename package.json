@@ -33,7 +33,9 @@
     "webpack-dev-server": "^5.2.1"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "framer-motion": "^12.9.2",
-    "mixitup": "^3.3.2"
+    "shufflejs": "^6.1.2",
+    "sweetalert2": "^11.22.0"
   }
 }

@@ -20,7 +20,7 @@
 .skills-row {
     min-height: 500px;
     /* ou algo que cubra o maior grupo visível */
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .card-title {
@@ -34,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5vh;
     margin-bottom: 5vh;
     gap: 10px;
 }
@@ -68,8 +69,9 @@
 .skill-card {
 
     position: relative;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     height: 350px;
+    cursor: pointer;
 
 }
 
@@ -110,7 +112,7 @@
     height: 100%;
     z-index: 2;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,4 +120,18 @@
     color: white;
 }
 
+.skill-card.active h4 {
+    opacity: 1;
+    visibility: visible;
+}
 
+.skill-card.active .card-body p {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.skill-card.active img {
+    opacity: 1;
+    visibility: visible;
+}

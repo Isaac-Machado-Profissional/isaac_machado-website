@@ -28,7 +28,7 @@
                 </button>
 
                 <!-- Conteúdo da Navbar -->
-                <div class="collapse navbar-collapse r" id="navbarMobile">
+                <div class="collapse collapse-horizontal navbar-collapse" id="navbarMobile">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a href="./index.html" class="nav-link navbar-link-custom active">
@@ -76,35 +76,40 @@
     </header>
 
     <main>
-        <div class="homescreen-container">
+        <div class="homescree-content" data-aos="fade-up">
+            <div class="homescreen-container">
 
-            <div class="left"> <img src="./assets/isaac-machado_5-7png.png" alt="Isaac Machado"> </div>
-            <div class="right">
-                <h1>Olá, eu sou o Isaac Machado! <br>Um <span id="typewriter" class="typewritter-color"></span><span
-                        class="cursor">|</h1>
+                <div class="left">
+                    <img id="profile-img" class="hidden-img" src="./assets/isaac-machado_5-7png.png"
+                        alt="Isaac Machado">
+                </div>
+                <div class="right" data-duration="50000">
+                    <h1>Olá, eu sou o Isaac Machado! <br>Um <span id="typewriter" class="typewritter-color"></span><span
+                            class="cursor">|</h1>
+                </div>
+
             </div>
 
-        </div>
+            <div class="acordeon">
+                <div class="acordeon-item aboutMe">
+                    <h2 class="acordeon-header">
+                        <span class="acordeon-trigger" role="button" tabindex="0" aria-expanded="false"
+                            aria-controls="content-about" id="trigger-about">
+                            Sobre mim
+                        </span>
 
-        <div class="acordeon">
-            <div class="acordeon-item aboutMe">
-                <h2 class="acordeon-header">
-                    <span class="acordeon-trigger" role="button" tabindex="0" aria-expanded="false"
-                        aria-controls="content-about" id="trigger-about">
-                        Sobre mim
-                    </span>
-
-                </h2>
-                <div class="acordeon-content" id="content-about" aria-labelledby="trigger-about" role="region">
-                    <div class="acordeon-content-wrapper">
-                        <p>
-                            Universitário Público, provendo reparações, engenharias e soluções em Tecnologia como um
-                            <span class="letter-color">WEB Developer</span>, <span class="letter-color">Programador
-                                Front-END,
-                                Back-END</span>,
-                            <span class="letter-color">Designer</span> e fã de <span class="letter-color">T.I</span>
-                        </p>
-                        <div class="socialMedias">
+                    </h2>
+                    <div class="acordeon-content" id="content-about" aria-labelledby="trigger-about" role="region">
+                        <div class="acordeon-content-wrapper">
+                            <p>
+                                Universitário Público, provendo reparações, engenharias e soluções em Tecnologia como um
+                                <span class="letter-color">WEB Developer</span>, <span class="letter-color">Programador
+                                    Front-END,
+                                    Back-END</span>,
+                                <span class="letter-color">Designer</span> e o <span class="letter-color"> cara do
+                                    T.I</span>
+                            </p>
+                            <!-- <div class="socialMedias">
                             <a href="https://github.com/Isaac-Machado-Profissional" target="_blank"
                                 rel="noopener noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="black"
@@ -132,20 +137,35 @@
                                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                                 </svg>
                             </a>
+                        </div> -->
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
-
 
     </main>
 
 
     <footer>
         <p>© 2025 Isaac Machado</p>
+        <p>
+            <br>
+            <a href="./privacidade.html">Política de privacidade</a>
+        </p>
     </footer>
+
+    <div id="cookie-banner">
+        <p>
+            Uso de tecnologias essenciais para melhorar a sua experiência. <br>
+            <a href="/privacidade.html">Saiba mais</a>
+        </p>
+        <button id="btn-settings">Configurações</button>
+        <button id="btn-accept">Aceitar</button>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
