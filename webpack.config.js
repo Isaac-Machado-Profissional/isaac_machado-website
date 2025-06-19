@@ -8,19 +8,15 @@ const PORTA = 9000;
 
 const pages = ['index', 'contact', 'formation', 'skills', 'projects', 'privacidade'];
 
-// Passo 1: Criar o objeto de pontos de entrada dinamicamente
 const entryPoints = pages.reduce((acc, page) => {
-  // Assumindo que o nome do JS é o mesmo do HTML
   acc[page] = `./src/javascript/import/${page}.js`;
   return acc;
 }, {});
 
 module.exports = {
-  // Use o objeto de entradas que criamos
   entry: entryPoints,
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    // Passo 2: Use [name] para criar um bundle para cada entrada
+    path: path.resolve(__dirname, 'docs'),
     filename: 'javascript/[name].bundle.js',
     publicPath: '/',
     clean: true,
@@ -28,30 +24,46 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test: /\.(js|jsx)$/,  // processa .js e .jsx
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react', // para React/JSX
+            ],
+          },
+        },
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext][query]'
-        }
+          filename: 'assets/images/[hash][ext][query]',
+        },
       },
     ],
   },
+  resolve: {
+    extensions: ['.js', '.jsx'], // importar sem extensão
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-
-    // Passo 3: Diga a cada HTML qual chunk (JS) ele deve usar
     ...pages.map(page => new HtmlWebpackPlugin({
       template: `./src/html/${page}.html`,
       filename: `${page}.html`,
       inject: true,
-      chunks: [page] // Conecta 'index.html' com 'index.bundle.js', e assim por diante.
-    })
-    ),
-
+      chunks: [page], // só inclui o JS daquela página
+    })),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -60,22 +72,18 @@ module.exports = {
         },
       ],
     }),
-
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
       chunkFilename: 'styles/[id].css',
     }),
   ],
   devServer: {
-    static: [{
-      // Serve os arquivos estáticos do diretório 'public'
+    static: {
       directory: path.resolve(__dirname, 'dist'),
-    }
-
-    ],
+    },
     port: PORTA,
     open: true,
     hot: true,
   },
-  mode: 'development',
+  mode: 'production',
 };

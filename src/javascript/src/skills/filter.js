@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const shuffleInstance = new Shuffle(container, {
     itemSelector: '.mix',
     buffer: 1,
-    speed: 300,
+    speed: 500,
   });
 
   const filterButtons = document.querySelectorAll('.controls button');

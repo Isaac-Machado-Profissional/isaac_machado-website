@@ -1,0 +1,14 @@
+@media (min-width: 0px) and (max-width: 1000px) {
+
+    .navbar {
+        width: min-content;
+        margin: 0 !important;
+    }
+
+    .nav-item {
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+
+}

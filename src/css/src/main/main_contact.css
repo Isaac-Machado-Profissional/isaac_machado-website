@@ -1,6 +1,6 @@
 .contact-container {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
@@ -124,6 +124,7 @@
 .consent-checkbox a {
     color: rgb(173, 173, 173);
 }
+
 .consent-checkbox a:hover {
     color: #afafaf;
     text-decoration: underline;
@@ -133,7 +134,8 @@
 
 .send-button {
     margin-top: 1rem;
-    background-color: #11c05f;
+    background-color: #1aaa6c;
+
     /* Usando uma cor que você já tem no site */
     border: none;
     padding: 1rem;
@@ -141,7 +143,8 @@
     width: 20%;
     justify-self: center;
     border-radius: 8px;
-    color: black;
+    color: rgb(255, 255, 255);
+
 
 }
 
@@ -150,11 +153,22 @@
 .btn-primary.send-button:focus,
 .btn-primary.send-button:focus-visible,
 .btn-primary.send-button:active {
-    background-color: #005e35;
+    background-color: #1a8a5c;
     /* Opcional: para garantir que a cor da borda não mude */
-    border-color: #00b969;
     /* Opcional: para remover a sombra de foco padrão do Bootstrap */
     box-shadow: none;
+}
+
+.checkbox-wrapper a {
+    color: #1aaa6c;
+    text-decoration: none;
+}
+
+.checkbox-wrapper a:hover {
+    color: #1a8a5c;
+    text-decoration: underline;
+
+
 }
 
 /* É uma boa prática definir também o estado padrão do botão */

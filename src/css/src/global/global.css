@@ -38,3 +38,4 @@ main {
 @import url('./footer.css');
 @import url('./navbar.css');
 @import url('./cookie.css');
+@import url('../mobile/mobile_global/mobile_navbar.css');

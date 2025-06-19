@@ -17,16 +17,9 @@
         border-radius: 7%;
 
     }
-    .navbar-toggler {
-        margin: 0 auto;
-    }
-    .nav-item {
-        margin-top: 2vh;
-        text-align: center;
-    }
-    .nav-link-custom {
-        margin: 0 auto;
-    }
+
+  
+   
 
     .acordeon {
         margin: 0;

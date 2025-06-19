@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const SIMULATE_DEV = true; // true = simula (não envia); false = envia de verdade
-  const form          = document.getElementById('contact-form');
-  const formStatus    = document.getElementById('form-status');
-  const bgContainer   = document.querySelector('.contact-background');
+  const SIMULATE_DEV = false;
+  const form = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  const bgContainer = document.querySelector('.contact-background');
+  const SUBJECT_PREFIX = 'Nova mensagem do site! — ';
 
   if (!form) return;
 
-  // Dicionário para traduzir erros do Formspree
   const dicionarioErros = {
     TYPE_EMAIL: 'não é um endereço de e‑mail válido',
     REQUIRED_FIELD_EMPTY: 'é um campo obrigatório e não pode ficar vazio',
@@ -16,28 +16,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    formStatus.style.display = 'block';
-    formStatus.innerHTML     = "<p class='text-center'>Enviando…</p>";
 
+    const selectSubject = document.getElementById('user-subject');
+    const hiddenSubject = document.getElementById('hidden-subject');
+
+    if (!selectSubject || !hiddenSubject) {
+      console.error('Campos de assunto não encontrados no DOM');
+      return;
+    }
+
+    // Preenche o hidden _subject
+    hiddenSubject.value = SUBJECT_PREFIX + (selectSubject.value || '');
+
+    // Feedback visual
+    formStatus.style.display = 'block';
+    formStatus.innerHTML = "<p class='text-center'>Enviando…</p>";
+
+    // Cria o FormData
     const data = new FormData(form);
 
-    // Função de sucesso: esconde o form e mostra agradecimento
+    // Remove duplicações
+    data.delete('subject');
+    data.delete('subject-option');
+
+    // Callback sucesso
     const onSuccess = () => {
       if (bgContainer) bgContainer.style.display = 'none';
       formStatus.innerHTML = `
         <div class="alert alert-success text-center">
-          🎉 Obrigado! Sua mensagem foi enviada com sucesso. Em breve retornarei a partir do <strong>Email desejado de retorno.</strong>
+          🎉 Obrigado! Sua mensagem foi enviada com sucesso. Em breve retornarei a partir do <strong>e‑mail indicado.</strong>
         </div>`;
       form.reset();
     };
 
-    // Modo DEV: simula
+    // Modo DEV
     if (SIMULATE_DEV) {
       console.log('💾 Dev mode — dados:', Object.fromEntries(data.entries()));
       return setTimeout(onSuccess, 800);
     }
 
-    // Modo PROD: envia ao Formspree
+    // Envio real
     try {
       const res = await fetch(form.action, {
         method: form.method,
@@ -51,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const errData = await res.json();
         if (errData.errors) {
           const items = errData.errors
-            .map(err => `<li>O campo <strong>${err.field||'desconhecido'}</strong> ${traduzir(err)}.</li>`)
+            .map(err => `<li>O campo <strong>${err.field || 'desconhecido'}</strong> ${traduzir(err)}.</li>`)
             .join('');
           formStatus.innerHTML = `
             <div class="alert alert-danger">

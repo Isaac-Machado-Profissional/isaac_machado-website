@@ -3,6 +3,9 @@ import "../src/index/index.js";
 import "../src/global/cookie.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import "../src/global/hover.js";
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,3 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     img.addEventListener('load', onImageReady);
   }
 });
+
+
+

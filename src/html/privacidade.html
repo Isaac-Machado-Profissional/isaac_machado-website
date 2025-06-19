@@ -12,7 +12,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
-    <link href="./styles/index.css" rel="stylesheet">
 
 
 </head>
@@ -21,56 +20,67 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobile"
-                    aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse r" id="navbarMobile">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a href="./index.html" class="nav-link navbar-link-custom">
-                                <span class="link-text">Início</span>
-                                <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
-                                    <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
-                                </svg></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./skills.html" class="nav-link navbar-link-custom">
-                                <span class="link-text">Habilidades</span>
-                                <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
-                                    <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./projects.html" class="nav-link navbar-link-custom">
-                                <span class="link-text">Projetos</span>
-                                <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
-                                    <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
-                                </svg></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./formation.html" class="nav-link navbar-link-custom">
-                                <span class="link-text">Formação</span>
-                                <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
-                                    <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html" class="nav-link navbar-link-custom">
-                                <span class="link-text">Contato</span>
-                                <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
-                                    <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <!-- Menu lateral -->
+                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link navbar-link-custom">
+                                    <span class="link-text">Início</span>
+                                    <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                        <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./skills.html" class="nav-link navbar-link-custom">
+                                    <span class="link-text">Habilidades</span>
+                                    <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                        <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./projects.html" class="nav-link navbar-link-custom">
+                                    <span class="link-text">Projetos</span>
+                                    <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                        <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./formation.html" class="nav-link navbar-link-custom">
+                                    <span class="link-text">Formação</span>
+                                    <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                        <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html" class="nav-link navbar-link-custom">
+                                    <span class="link-text">Contato</span>
+                                    <svg class="link-border" viewBox="0 0 100 40" preserveAspectRatio="none">
+                                        <rect x="1" y="1" width="98" height="38" rx="8" ry="8" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>
@@ -80,28 +90,39 @@
                 Esta política descreve como coletamos, usamos e protegemos os dados pessoais fornecidos por você através
                 do nosso formulário de contato.
             </p>
+            <p class="m-5"><i><u>Última atualização: Junho de 2025.</u></i></p>
 
-            <h4 class="mt-5">1. Coleta de Dados</h4>
+
+            <h4 class="mt-5">1. Dados</h4>
             <p>
-                Coletamos nome e e-mail exclusivamente para responder sua mensagem de contato. O preenchimento do
-                formulário é opcional.
+                Coletamos nome e e-mail que você nos informa exclusivamente para responder à sua mensagem de contato. O
+                preenchimento do formulário é opcional.
             </p>
             <p>
-                Informamos que seu navegador (como Edge, Chrome, Firefox, Safaria, etc.) pode oferecer a funcionalidade
+                Informamos que o seu navegador(como Google Chrome, Edge, Firefox, Opera, Safari, etc.) pode oferecer a funcionalidade
                 de
                 <strong>autocompletar formulários</strong>, salvando previamente dados como nome e e-mail digitados para
                 sua conveniência. Esta funcionalidade é gerenciada e controlada <strong>pelas configurações do seu
                     próprio navegador</strong> e não por este site.
             </p>
 
-            <h4 class="mt-4">2. Armazenamento e Processamento</h4>
+            <h4 class="mt-4">2. Formulário de Contato</h4>
             <p>
-                Utilizamos o serviço <strong>Formspree</strong> para processar os envios do formulário. Os dados são
+                Utilizo o serviço <strong><a href="https://getform.io" target="_blank"
+                        rel="noopener noreferrer">getform</a></strong> para processar os envios do formulário. Os dados
+                são
                 armazenados nos servidores deles de forma segura e não são utilizados para outras finalidades. Como
                 controlador, posso acessar ou excluir esses dados mediante solicitação.
             </p>
 
-            <h4 class="mt-4">3. Tecnologias Essenciais e Cookies</h4>
+            <h4 class="mt-4">3. Direitos do Usuário</h4>
+            <p>
+                Você pode solicitar a exclusão ou alteração dos dados fornecidos a qualquer momento, entrando em
+                contato
+                pelo e-mail: <strong>isaacmachado.profissional@gmail.com</strong>
+            </p>
+
+            <h4 class="mt-4">4. Tecnologias Essenciais e Cookies</h4>
             <p>
                 Este site <strong>não utiliza cookies de rastreamento, publicidade ou análise.</strong><br>
                 A única tecnologia de armazenamento local utilizada é o <code>`localStorage`</code> do seu navegador.
@@ -114,19 +135,8 @@
                 Este registro não coleta dados pessoais e é considerado essencial para garantir uma navegação fluida e
                 gerenciar suas preferências de privacidade.
             </p>
-            <h4 class="mt-4">4. Direitos do Usuário</h4>
-            <p>
-                Você pode solicitar a exclusão ou alteração dos dados fornecidos a qualquer momento, entrando em
-                contato
-                pelo e-mail: <strong>isaacmachado.profissional@gmail.com</strong>
-            </p>
 
-            <h4 class="mt-4">5. Alterações nesta Política</h4>
-            <p>
-                Esta política pode ser atualizada periodicamente. A última versão estará sempre disponível abaixo:
-            </p>
 
-            <p class="mt-5"><i>Última atualização: Junho de 2025.</i></p>
         </div>
 
 

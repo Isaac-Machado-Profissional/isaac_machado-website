@@ -1,9 +1,9 @@
 
 import { startTypewriter } from './typewriter.js';
-import { initGradientRestart } from "./gradientRestart.js";
+// import { initGradientRestart } from "./gradientRestart.js";
 import { initAcordeonWithScroll } from "./acordeon.js";
 
-initGradientRestart();
+// initGradientRestart();
 initAcordeonWithScroll();
 
 startTypewriter("typewriter", [

@@ -1,0 +1,457 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: white;
+}
+
+h3 {
+    font-size: 50px
+}
+
+h4 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #191818;
+    align-items: center;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    padding: 40px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    margin: 0;
+    /* remove o padding padrão do parágrafo */
+    padding: 0;
+    /* remove o padding padrão do parágrafo */
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #afafaf;
+    text-decoration: underline;
+}
+
+.navbar {
+    width: min-content;
+    margin: 0 auto 0 auto;
+    transition: all 0.3s ease;
+
+}
+
+header {
+    background-color: #0C0C0C;
+}
+
+
+.navbar-custom {
+    padding: 1rem 2rem;
+    background-color: #0C0C0C;
+}
+
+.navbar-custom .nav-link {
+
+    color: #ffffff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    /* text-transform: uppercase; */
+    /* overflow: hidden; */
+
+
+}
+
+
+/* Botão base */
+.navbar-custom .navbar-link-custom {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    color: #fff !important;
+    font-size: 1.1rem;
+    overflow: hidden;
+    margin: 0 1rem;
+    transition:
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease,
+        background-position 0.6s ease;
+}
+
+/* Texto por cima do SVG */
+.navbar-link-custom .link-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* SVG border (hover effect) */
+.navbar-link-custom .link-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 2;
+    stroke-dasharray: 270;
+    stroke-dashoffset: 270;
+    transition: stroke-dashoffset 0.4s ease;
+    pointer-events: none;
+}
+
+/* Hover: desenha borda */
+.navbar-link-custom:hover .link-border {
+    stroke-dashoffset: 0px;
+}
+
+.navbar-link-custom.clicked .link-border {
+  stroke-dashoffset: 0px; /* dispara a animação */
+}
+
+.navbar-custom .nav-link.active {
+    background-color: #dddde4;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600;
+    background-size: 100% 200%;
+    border-radius: 8px; 
+
+
+}
+
+
+
+
+/* Active/Current page: fundo tech e sombra animada */
+/* .navbar-custom .nav-link.active,
+.navbar-custom .nav-link[aria-current="page"] {
+    background-color: #dddde4;
+    font-weight: 600;
+    color: rgb(0, 0, 0) !important;
+    /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
+/* 
+    background-size: 100% 200%;
+    background-position: 0% 200%;
+    animation: gradient-slide-up 3s ease-in;
+    background-size: 100% 200%;
+    border-radius: 8px; */
+
+
+    /* box-shadow:
+        0 0 10px rgba(0, 255, 255, 0.6),
+        0 0 20px rgb(33, 1, 59); */
+
+    /* transform: translateY(-2px) perspective(600px) rotateX(3deg);
+
+}  */
+
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: none;
+}
+
+/* 3) Ainda no hover, religa a animação (reiniciada) */
+.navbar-custom .nav-link.active:hover,
+.navbar-custom .nav-link[aria-current="page"]:hover {
+    animation: gradient-slide-up 3s ease;
+}
+
+
+/* Retira o stroke quando ativo para não sobrepor o fundo */
+.navbar-link-custom.active .link-border {
+    stroke: none;
+}
+
+/* Clique visual */
+.navbar-link-custom:active {
+    transform: scale(0.98);
+    /* box-shadow:
+        0 0 50px rgb(0, 255, 255),
+        0 0 50px rgb(34, 2, 56); */
+    transition: ease-in;
+}
+
+
+
+/* Animação do gradiente */
+@keyframes gradient-slide-up {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+    /* Começa escondido e fora da tela */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    /* Evita clique enquanto oculto */
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    #cookie-banner {
+        max-width: 80%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Centraliza horizontalmente com left/right 0 */
+    }
+}
+
+#cookie-banner.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#cookie-banner p {
+    margin-bottom: 10px;
+    /* Espaço entre texto e botões */
+}
+
+
+#cookie-banner button {
+    margin-top: 10px;
+    /* Espaço acima dos botões */
+    /* Estilos dos botões do banner */
+    background-color: #1aaa6c;
+    /* Cor mais amigável para aceitar/configurar */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#cookie-banner button:hover {
+    background-color: #1a8a5c;
+}
+
+
+/* MODAL SWEETALERT2: */
+
+.swal2-cookie-settings-popup {
+    max-width: 400px;
+    /* Limita a largura do popup */
+    text-align: left;
+}
+
+.swal2-cookie-settings-popup label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.swal2-cookie-settings-popup input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.swal2-cookie-settings-popup {
+    background-color: #fdfdfd;
+    /* Cor de fundo do modal */
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+}
+
+.swal2-html-container p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.swal2-confirm {
+    background-color: #1aaa6c !important;
+    color: white !important;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.swal2-confirm:hover {
+    background-color: #1a8a5c !important;
+    transform: scale(1.05);
+
+}
+
+
+
+.swal2-cancel {
+    background-color: #ccc !important;
+    color: #333 !important;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+
+}
+
+.swal2-cancel:hover {
+    background-color: #c0c0c0 !important;
+    transform: scale(1.05);
+
+}
+
+
+
+/* Fundo escurecido */
+.swal2-backdrop-show {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.show a {
+    color: #1aaa6c;
+    text-decoration: none;
+}
+
+.show a:hover {
+    color: #126945;
+    text-decoration: underline;
+
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+
+    .navbar {
+        width: min-content;
+        margin: 0 !important;
+    }
+
+    .nav-item {
+        margin-top: 2vh;
+        text-align: center;
+    }
+
+
+}
+/* Removemos o "global:" e o "object-fit" */
+
+/* 1. Aplique o background APENAS ao html e body */
+html, body {
+    /* O gradiente agora cobre a página inteira */
+    background: linear-gradient(to bottom, #0C0C0C, #0A0017);
+    /* Cor de fallback caso o gradiente falhe ou não carregue */
+    background-color: #0A0017;
+    background-repeat: no-repeat;
+
+    /* Adicional: Faz o background ficar fixo e não rolar com a página,
+       o que deixa o gradiente mais estável e bonito. */
+    background-attachment: fixed;
+
+    /* Define uma cor de texto padrão para o site, evitando texto preto em fundo escuro */
+    color: white;
+
+    /* 2. Garante que o body ocupe no mínimo a tela inteira */
+    min-height: 100vh;
+    margin: 0; /* Boa prática para zerar margens padrão do navegador */
+    padding: 0; /* Boa prática para zerar paddings padrão */
+}
+
+/* 3. Estrutura a página para o footer ficar sempre no final */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Esta regra mágica faz o conteúdo principal (main) crescer
+       para ocupar todo o espaço disponível, empurrando o footer para baixo. */
+    flex-grow: 1;
+}
+/* Removemos o "global:" e o "object-fit" */
+
+/* 1. Aplique o background APENAS ao html e body */
+html, body {
+    /* O gradiente agora cobre a página inteira */
+    background: linear-gradient(to bottom, #0C0C0C, #0A0017);
+    /* Cor de fallback caso o gradiente falhe ou não carregue */
+    background-color: #0A0017;
+    background-repeat: no-repeat;
+
+    /* Adicional: Faz o background ficar fixo e não rolar com a página,
+       o que deixa o gradiente mais estável e bonito. */
+    background-attachment: fixed;
+
+    /* Define uma cor de texto padrão para o site, evitando texto preto em fundo escuro */
+    color: white;
+
+    /* 2. Garante que o body ocupe no mínimo a tela inteira */
+    min-height: 100vh;
+    margin: 0; /* Boa prática para zerar margens padrão do navegador */
+    padding: 0; /* Boa prática para zerar paddings padrão */
+}
+
+/* 3. Estrutura a página para o footer ficar sempre no final */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    /* Esta regra mágica faz o conteúdo principal (main) crescer
+       para ocupar todo o espaço disponível, empurrando o footer para baixo. */
+    flex-grow: 1;
+}
+.privacidade-container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.privacidade-container p {
+    margin: 20px 50px 20px 50px;
+}
+
+.privacidade-container li {
+    margin: 20px 50px 20px 50px;
+}
+
+.privacidade-container a {
+    text-decoration: none;
+}
+.privacidade-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+

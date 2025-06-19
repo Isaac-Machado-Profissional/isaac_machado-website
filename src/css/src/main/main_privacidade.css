@@ -12,3 +12,11 @@
 .privacidade-container li {
     margin: 20px 50px 20px 50px;
 }
+
+.privacidade-container a {
+    text-decoration: none;
+}
+.privacidade-container a:hover {
+    text-decoration: underline;
+}
+

@@ -1,7 +1,9 @@
 
 .navbar {
-    justify-content: center;
-    justify-self: center;
+    width: min-content;
+    margin: 0 auto 0 auto;
+    transition: all 0.3s ease;
+
 }
 
 header {
@@ -35,7 +37,6 @@ header {
     padding: 0.6rem 1.2rem;
     color: #fff !important;
     font-size: 1.1rem;
-    border-radius: 8px;
     overflow: hidden;
     margin: 0 1rem;
     transition:
@@ -64,7 +65,7 @@ header {
     stroke-width: 2;
     stroke-dasharray: 270;
     stroke-dashoffset: 270;
-    transition: stroke-dashoffset 0.5s ease;
+    transition: stroke-dashoffset 0.4s ease;
     pointer-events: none;
 }
 
@@ -73,25 +74,45 @@ header {
     stroke-dashoffset: 0px;
 }
 
+.navbar-link-custom.clicked .link-border {
+  stroke-dashoffset: 0px; /* dispara a animação */
+}
+
+.navbar-custom .nav-link.active {
+    background-color: #dddde4;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600;
+    background-size: 100% 200%;
+    border-radius: 8px; 
+
+
+}
+
+
+
+
 /* Active/Current page: fundo tech e sombra animada */
-.navbar-custom .nav-link.active,
+/* .navbar-custom .nav-link.active,
 .navbar-custom .nav-link[aria-current="page"] {
     background-color: #dddde4;
     font-weight: 600;
     color: rgb(0, 0, 0) !important;
     /* background: linear-gradient(0deg, #2d044e, #6200ff, #54b7f0); -------------- ****PENSAR DEPOIS */
-
+/* 
     background-size: 100% 200%;
     background-position: 0% 200%;
     animation: gradient-slide-up 3s ease-in;
+    background-size: 100% 200%;
+    border-radius: 8px; */
+
 
     /* box-shadow:
         0 0 10px rgba(0, 255, 255, 0.6),
         0 0 20px rgb(33, 1, 59); */
 
-    transform: translateY(-2px) perspective(600px) rotateX(3deg);
+    /* transform: translateY(-2px) perspective(600px) rotateX(3deg);
 
-}
+}  */
 
 .navbar-custom .nav-link.active:hover,
 .navbar-custom .nav-link[aria-current="page"]:hover {

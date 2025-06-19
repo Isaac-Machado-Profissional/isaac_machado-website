@@ -18,7 +18,7 @@
 
 
 .skills-row {
-    min-height: 500px;
+    /* min-height: 500px; */
     /* ou algo que cubra o maior grupo visível */
     transition: all 0.5s ease;
 }
@@ -70,7 +70,6 @@
 
     position: relative;
     transition: all 0.5s ease-in-out;
-    height: 350px;
     cursor: pointer;
 
 }

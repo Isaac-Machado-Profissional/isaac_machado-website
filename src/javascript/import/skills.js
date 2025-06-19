@@ -3,3 +3,4 @@ import "../src/skills/filter.js";
 import "../src/skills/activeSkill.js";
 import '../src/global/animateOnScroll.js';
 import "../src/global/cookie.js";
+import "../src/global/hover.js";

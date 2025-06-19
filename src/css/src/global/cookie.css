@@ -128,3 +128,14 @@
 .swal2-backdrop-show {
     background: rgba(0, 0, 0, 0.5) !important;
 }
+
+.show a {
+    color: #1aaa6c;
+    text-decoration: none;
+}
+
+.show a:hover {
+    color: #126945;
+    text-decoration: underline;
+
+}
