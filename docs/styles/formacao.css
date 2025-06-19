@@ -344,6 +344,17 @@ header {
     background: rgba(0, 0, 0, 0.5) !important;
 }
 
+.swal2-html-container a {
+    color: #1aaa6c;
+    text-decoration: none;
+}
+
+.swal2-html-container a:hover {
+    color: #126945;
+    text-decoration: underline;
+
+}
+
 .show a {
     color: #1aaa6c;
     text-decoration: none;
