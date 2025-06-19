@@ -1,3 +1,6 @@
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/global/font-styles.css ***!
+  \**************************************************************************************/
 h1,
 h2,
 h3,
@@ -17,7 +20,16 @@ h4 {
     font-weight: 600;
 }
 
+a {
+    text-decoration: none;
+}
 
+a:hover {
+    text-decoration: none !important;
+}
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/global/footer.css ***!
+  \*********************************************************************************/
 
 footer {
     display: flex;
@@ -47,6 +59,9 @@ footer a:hover {
     color: #afafaf;
     text-decoration: underline;
 }
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/global/navbar.css ***!
+  \*********************************************************************************/
 
 .navbar {
     width: min-content;
@@ -207,6 +222,9 @@ header {
 }
 
 
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/global/cookie.css ***!
+  \*********************************************************************************/
 #cookie-banner {
     position: fixed;
     bottom: 20px;
@@ -348,6 +366,9 @@ header {
     text-decoration: underline;
 
 }
+/*!******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/mobile/mobile_global/mobile_navbar.css ***!
+  \******************************************************************************************************/
 @media (min-width: 0px) and (max-width: 1000px) {
 
     .navbar {
@@ -362,6 +383,48 @@ header {
 
 
 }
+/*!*************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/global/hamburguer.css ***!
+  \*************************************************************************************/
+.hamburger {
+  cursor: pointer;
+}
+.hamburger input {
+  display: none;
+}
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition:
+    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* SACADA 1: Botão sempre visível e acima de tudo */
+.zindex-fixed {
+  z-index: 1061; /* acima do .offcanvas (1055) e backdrop (1050) */
+}
+
+/*!***************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/src/global/global.css ***!
+  \***************************************************************************************************************************/
 /* Removemos o "global:" e o "object-fit" */
 
 /* 1. Aplique o background APENAS ao html e body */
@@ -396,6 +459,9 @@ main {
        para ocupar todo o espaço disponível, empurrando o footer para baixo. */
     flex-grow: 1;
 }
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/global/global.css ***!
+  \*********************************************************************************/
 /* Removemos o "global:" e o "object-fit" */
 
 /* 1. Aplique o background APENAS ao html e body */
@@ -430,6 +496,9 @@ main {
        para ocupar todo o espaço disponível, empurrando o footer para baixo. */
     flex-grow: 1;
 }
+/*!*****************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/main/main_privacidade.css ***!
+  \*****************************************************************************************/
 .privacidade-container {
     margin-left: 10%;
     margin-right: 10%;
@@ -453,5 +522,11 @@ main {
 }
 
 
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/src/mobile/mobile_privacidade.css ***!
+  \*********************************************************************************************/
 
+/*!*************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/src/privacidade.css ***!
+  \*************************************************************************************************************************/
 

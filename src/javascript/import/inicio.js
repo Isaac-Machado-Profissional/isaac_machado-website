@@ -4,9 +4,7 @@ import "../src/global/cookie.js";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "../src/global/hover.js";
-
-
-
+import "../src/global/hamburguer.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   const img = document.getElementById('profile-img');

@@ -85,5 +85,5 @@ module.exports = {
     open: true,
     hot: true,
   },
-  mode: 'production',
+  mode: 'development',
 };
