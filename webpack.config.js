@@ -6,7 +6,7 @@ const path = require('path');
 
 const PORTA = 9000;
 
-const pages = ['index', 'contact', 'formation', 'skills', 'projects', 'privacidade'];
+const pages = ['inicio', 'contato', 'formacao', 'habilidades', 'projetos', 'privacidade'];
 
 const entryPoints = pages.reduce((acc, page) => {
   acc[page] = `./src/javascript/import/${page}.js`;
@@ -57,13 +57,13 @@ module.exports = {
     extensions: ['.js', '.jsx'], // importar sem extensão
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     ...pages.map(page => new HtmlWebpackPlugin({
       template: `./src/html/${page}.html`,
-      filename: `${page}.html`,
+      filename: `${page}/index.html`,  // aqui, gera pasta + index.html
       inject: true,
-      chunks: [page], // só inclui o JS daquela página
+      chunks: [page],
     })),
+
     new CopyWebpackPlugin({
       patterns: [
         {

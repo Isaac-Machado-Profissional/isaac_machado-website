@@ -1,4 +1,4 @@
-import '../../css/src/index.css';
+import '../../css/src/inicio.css';
 import "../src/index/index.js";
 import "../src/global/cookie.js";
 import AOS from 'aos';

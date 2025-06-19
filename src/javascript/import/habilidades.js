@@ -1,4 +1,4 @@
-import '../../css/src/skills.css';
+import '../../css/src/habilidades.css';
 import "../src/skills/filter.js";
 import "../src/skills/activeSkill.js";
 import '../src/global/animateOnScroll.js';

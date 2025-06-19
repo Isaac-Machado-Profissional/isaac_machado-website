@@ -4,7 +4,7 @@
 import '../../css/src/tailwind.css';
 
 // 2️⃣ depois seus estilos específicos
-import '../../css/src/contact.css';
+import '../../css/src/contato.css';
 
 
 // 3️⃣ os scripts não-React
