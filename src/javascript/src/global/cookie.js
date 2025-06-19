@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <input type="checkbox" name="essential" checked disabled style="margin-right: 5px;">
                         Tecnologias Essenciais
                     </label>
-                    <p>Necessário para o funcionamento do site. <br> <a href="./privacidade.html">Saiba mais</a></p>
+                    <p>Necessário para o funcionamento do site. <br> <a href="/privacidade/">Saiba mais</a></p>
                 </form>
             `,
             showCancelButton: true,
