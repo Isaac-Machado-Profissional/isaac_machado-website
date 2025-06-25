@@ -488,12 +488,12 @@ main {
 
 
 .formation-container h5 {
-    margin-left: 25%;
+    padding-left: 25%;
 }
 
 .formation-container h6 {
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 30vw;
+    padding-right: 30vw;
 }
 
 .formation-container .placeblock {
@@ -506,13 +506,16 @@ main {
 
 .formation-container .placeblock h6 {
     margin: 0px 0px 0px 0px;
+    padding: 0px;
     color: black;
 }
 
 .formation-container .placeblock h5 {
     color: black;
-    padding-left: 0px;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
+
 
 
 
