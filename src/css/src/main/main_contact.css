@@ -1,6 +1,6 @@
 .contact-container {
-    margin-left: 5%;
-    margin-right: 5%;
+    padding-left: 5vw;
+    padding-right: 5vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
@@ -11,8 +11,8 @@
 }
 
 .contact-info {
-    margin-left: 20%;
-    margin-right: 20%;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 

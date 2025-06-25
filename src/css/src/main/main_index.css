@@ -79,7 +79,8 @@
 .acordeon {
     width: 400px;
 
-    margin-left: 5%;
+    padding-left: 5vw;
+    padding-right: 5vw;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;

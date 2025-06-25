@@ -24,8 +24,8 @@
 }
 
 .formation-container h6 {
-    margin-left: 30%;
-    margin-right: 30%;
+    padding-left: 30%;
+    padding-right: 30%;
 }
 
 .formation-container .placeblock {
@@ -43,7 +43,7 @@
 
 .formation-container .placeblock h5 {
     color: black;
-    margin-left: 0px;
+    padding-left: 0px;
 }
 
 
@@ -53,13 +53,12 @@
 }
 
 .formation-container .placeblock .date {
-    margin-left: 20%;
+    margin-left: 5vw;
 }
 
-.formation-container .placeblock ul,
-li {
-    margin-left: 0px;
-    margin-right: 0px;
+.formation-container .placeblock ul {
+    padding-left: 5vw;
+    padding-right: 5vw;
 
 }
 
