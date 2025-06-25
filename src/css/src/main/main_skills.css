@@ -84,7 +84,7 @@
 
 .skill-card img {
     width: auto;
-    height: 200px;
+    min-height: 200px;
 }
 
 .skill-card:hover .card-body p {
