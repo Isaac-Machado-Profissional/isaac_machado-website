@@ -53,7 +53,6 @@ footer a:hover {
     color: #afafaf;
     text-decoration: underline;
 }
-
 .navbar {
     width: min-content;
     margin: 0 auto 0 auto;
@@ -69,7 +68,10 @@ header {
 .navbar-custom {
     padding: 1rem 2rem;
     background-color: #0C0C0C;
+    
 }
+
+
 
 .navbar-custom .nav-link {
 
@@ -101,6 +103,17 @@ header {
         background-position 0.6s ease;
 }
 
+/* FOCUS TECLADO NAO ATRAPALHAR  */
+.navbar-link-custom:focus,
+.navbar-link-custom:focus-visible,
+.navbar-custom .nav-link:focus,
+.navbar-custom .nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
 /* Texto por cima do SVG */
 .navbar-link-custom .link-text {
     position: relative;
@@ -129,8 +142,14 @@ header {
     stroke-dashoffset: 0px;
 }
 
+.navbar-link-custom:focus-visible .link-border {
+    stroke-dashoffset: 0px;
+
+}
+
 .navbar-link-custom.clicked .link-border {
-  stroke-dashoffset: 0px; /* dispara a animação */
+    stroke-dashoffset: 0px;
+    /* dispara a animação */
 }
 
 .navbar-custom .nav-link.active {
@@ -138,7 +157,7 @@ header {
     color: rgb(0, 0, 0) !important;
     font-weight: 600;
     background-size: 100% 200%;
-    border-radius: 8px; 
+    border-radius: 8px;
 
 
 }
@@ -161,11 +180,11 @@ header {
     border-radius: 8px; */
 
 
-    /* box-shadow:
+/* box-shadow:
         0 0 10px rgba(0, 255, 255, 0.6),
         0 0 20px rgb(33, 1, 59); */
 
-    /* transform: translateY(-2px) perspective(600px) rotateX(3deg);
+/* transform: translateY(-2px) perspective(600px) rotateX(3deg);
 
 }  */
 
@@ -211,8 +230,6 @@ header {
         background-position: 0% 100%;
     }
 }
-
-
 #cookie-banner {
     position: fixed;
     bottom: 20px;
