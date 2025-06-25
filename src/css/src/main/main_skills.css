@@ -82,7 +82,10 @@
     opacity: 0;
 }
 
-
+.skill-card img {
+    width: auto;
+    height: 200px;
+}
 
 .skill-card:hover .card-body p {
     opacity: 1;
