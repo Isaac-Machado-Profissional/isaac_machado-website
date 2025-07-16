@@ -1,4 +1,4 @@
 # Isaac Machado 
-This its my new personal website, actualy showing a little about my skills.
+Immerse in my personal website experience.
 
-- Live on: https://isaacmachado.com.br/
+- Live on: https://isaacmachado.com.br
